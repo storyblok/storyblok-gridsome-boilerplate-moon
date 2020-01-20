@@ -6,5 +6,15 @@
 
 module.exports = {
   siteName: 'Gridsome Multilanguage Website',
-  plugins: []
+  plugins: [
+    {
+      use: 'gridsome-source-storyblok',
+      options: {
+        client: {
+          accessToken: '<YOUR_SPACE_TOKEN>',
+          downloadImages: true
+        }
+      }
+    }
+  ]
 }
