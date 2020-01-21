@@ -1,5 +1,6 @@
 import Logo from './Logo.vue'
 import Page from './Page.vue'
+import Link from './Link.vue'
 import Footer from './Footer.vue'
 import Teaser from './Teaser.vue'
 import Metrics from './Metrics.vue'
@@ -14,6 +15,7 @@ import PrincipalArticle from './PrincipalArticle.vue'
 
 export default {
   Logo,
+  Link,
   Page,
   Footer,
   Teaser,

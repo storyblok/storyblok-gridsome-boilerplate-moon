@@ -1,6 +1,6 @@
 <template>
   <header class="teaser">
-    <Logo :image="blok.logo" max-width="180px" />
+    <Logo :image="blok.logo" />
     <Navigation :items="blok.navigation" />
   </header>
 </template>
