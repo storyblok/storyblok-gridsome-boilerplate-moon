@@ -11,9 +11,10 @@ module.exports = {
       use: 'gridsome-source-storyblok',
       options: {
         client: {
-          accessToken: process.env.SPACE_TOKEN,
-          downloadImages: true
-        }
+          accessToken: process.env.SPACE_TOKEN
+        },
+        downloadImages: true,
+        imageDirectory: 'assets/images'
       }
     }
   ]
