@@ -1,6 +1,10 @@
 <template>
-  <div>
-    <component :key="blok._uid" v-for="blok in blok.body" :blok="blok" :is="blok.component"></component>
+  <div class="page-container">
+    <component
+      :key="blok._uid"
+      v-for="blok in blok.body"
+      :blok="blok"
+      :is="blok.component"></component>
   </div>
 </template>
 

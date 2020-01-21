@@ -1,7 +1,7 @@
 <template>
-  <div class="teaser">
-    <h1>{{ blok.headline }}</h1>
-  </div>
+  <header class="teaser">
+    <Navigation :items="blok.navigation" />
+  </header>
 </template>
 
 <script>

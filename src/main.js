@@ -2,14 +2,14 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import DefaultLayout from '~/layouts/Default.vue'
-import Page from '~/components/Page.vue'
-import Teaser from '~/components/Teaser.vue'
+import Components from './components'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 
-  // register components
-  Vue.component('Page', Page)
-  Vue.component('Teaser', Teaser)
+  // registering the components
+  Object.keys(Components).forEach(key => {
+    Vue.component(key, Components[key])
+  })
 }
