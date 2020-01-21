@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap');
+
+/* global styles */
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* utilities */
+.container {
+  max-width: 1200px;
+}
