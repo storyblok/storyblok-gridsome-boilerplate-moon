@@ -22,17 +22,14 @@
 </template>
 
 <script>
-import { formatDateToMonthDay } from '../utils/date'
+import { getPublishedFormatDate } from '../utils/article'
 
 export default {
   name: 'PrincipalArticle',
   props: ['blok'],
   computed: {
     articlePublished () {
-      const date = formatDateToMonthDay(this.blok.date)
-      const label = this.blok.label
-
-      return `${label} / ${date}`
+      return getPublishedFormatDate(this.blok)
     }
   }
 }
