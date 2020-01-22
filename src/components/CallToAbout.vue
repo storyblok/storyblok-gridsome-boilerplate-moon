@@ -28,7 +28,6 @@ export default {
 <style>
 .call-to-about {
   padding-top: 20px;
-  /* width: 90%; */
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -71,4 +70,28 @@ export default {
   line-height: 1.63;
   margin-top: 40px;
 }
+
+@media (max-width: 762px) {
+  .call-to-about {
+    display: inline;
+    /* justify-content: none; */
+  }
+  .call-to-about-mask {
+    display: none;
+  }
+  .call-to-about-image {
+    margin: 0 auto;
+    width: 100%;
+    float: none;
+  }
+  .call-to-about-section {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+  }
+  .call-to-about-section_title { 
+    margin-top: 0px;
+  }
+} 
+
 </style>

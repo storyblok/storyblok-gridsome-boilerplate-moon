@@ -43,4 +43,16 @@ export default {
   color: #2c2c2c;
 }
 
+@media (max-width: 762px) {
+  .metric-card {
+    flex-direction: column;
+  }
+
+  .metric-card-container {
+    margin-right: 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
 </style>

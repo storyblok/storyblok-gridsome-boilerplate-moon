@@ -55,4 +55,23 @@ export default {
   height: 70px;
   background-color: #2c2c2c;
 }
+
+@media (max-width: 762px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer .footer-links {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    margin: 0 auto;
+  }
+
+  .footer .logo {
+    margin-top: 20px;
+    max-width: 120px;
+  }
+}
 </style>
