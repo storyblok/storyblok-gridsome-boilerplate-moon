@@ -1,5 +1,7 @@
 <template>
-  <Layout>
+  <Layout
+    :global-content="$context.globalContent.content"
+  >
     <component
       v-if="story.content.component"
       :key="story.content._uid"

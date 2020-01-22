@@ -18,18 +18,35 @@ module.exports = function (api) {
           node {
             id
             full_slug
+            content
           }
         }
       }
     }`)
 
+    // split contents and globalContent story from edges
+    const edges = data.allStoryblokEntry.edges || []
+    const { nodes, globalContent } = edges.reduce((acc, edge) => {
+      if (edge.node.content.component === 'global') {
+        acc['globalContent'] = edge.node
+      } else {
+        acc['nodes'].push(edge.node)
+      }
+
+      return acc
+    }, {
+      nodes: [],
+      globalContent: {}
+    })
+
     // for each content found create a page
-    data.allStoryblokEntry.edges.forEach(({ node }) => {
+    nodes.forEach(node => {
       createPage({
         path: `/${node.full_slug}`,
         component: './src/templates/StoryblokEntry.vue',
         context: {
-          id: node.id
+          id: node.id,
+          globalContent
         }
       })
     })

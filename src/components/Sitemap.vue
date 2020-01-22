@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <Logo :image="blok.logo.url" />
+    <Logo :image="blok.logo" />
     
     <ul class="footer-links">
       <li 
