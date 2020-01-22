@@ -2,8 +2,7 @@
   <div>
     <div class="copyright">
       <p class="copyright-title">Powered by</p>
-        <!-- <img class="copyright-image" :src=" 'https://a.storyblok.com/f/51376/x/19b4879a86/logo.svg' " alt=""> -->
-      <p class="copyright-label">Storyblok</p>
+      <img class="copyright-image" src="../assets/images/colored-full.svg" alt="">
     </div>
   </div>
 </template>
@@ -16,17 +15,19 @@ export default {
 </script>
 
 <style>
+.copyright-title {
+  color: #bfc4cb;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
 .copyright {
+  margin-top: 150px;
   text-align: center;
+  margin-bottom: 30px;
 }
 .copyright-image {
-  width: 70px;
-  height: 72px;
-  filter: grayscale(100%);
+  width: 91px;
+  height: 20px;
 }
 
-.copyright-label {
-  margin-top: 10px;
-  /* filter: grayscale(100%); */
-}
 </style>

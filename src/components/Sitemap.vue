@@ -39,7 +39,6 @@ export default {
   height: 104px;
   line-height: 1.63;
   letter-spacing: normal;
-  align-items: center;
 }
 .footer .logo {
   max-width: 120px;
