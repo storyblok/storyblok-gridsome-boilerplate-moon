@@ -14,6 +14,8 @@ import AboutContent from './AboutContent.vue'
 import PrincipalCard from './PrincipalCard.vue'
 import ArticlesSection from './ArticlesSection.vue'
 import PrincipalArticle from './PrincipalArticle.vue'
+import ContactSection from './ContactSection.vue'
+import ContactInformation from './ContactInformation.vue'
 
 export default {
   Logo,
@@ -32,5 +34,7 @@ export default {
   AboutContent,
   PrincipalCard,
   ArticlesSection,
-  PrincipalArticle
+  PrincipalArticle,
+  ContactInformation,
+  ContactSection,
 }
