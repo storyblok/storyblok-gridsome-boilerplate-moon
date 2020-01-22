@@ -9,7 +9,6 @@
     <div class="call-to-about-section">
       <h2 class="call-to-about-section_title">{{blok.title}}</h2>
       <p class="call-to-about-section_description">{{blok.description}}</p>
-      <Link class="call-to-about-section_link" :to="blok.link.cached_url" name="Find out More" />
     </div>
     
   </div>
@@ -70,10 +69,6 @@ export default {
   font-size: 16px;
   color: #a6a6a6;
   line-height: 1.63;
-  margin-top: 40px;
-}
-
-.call-to-about-section_link {
   margin-top: 40px;
 }
 </style>
