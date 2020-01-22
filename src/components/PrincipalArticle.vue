@@ -80,4 +80,24 @@ export default {
   line-height: 1.63;
   margin-bottom: 50px;
 }
+
+@media screen and (max-width: 762px) {
+  .principal-article {
+    flex-direction: column;
+    justify-content: flex-end;
+    height: auto;
+  }
+
+  .principal-article__left {
+    width: 100%;
+    padding: 40px;
+    order: 1;
+  }
+
+  .principal-article__right {
+    width: 100%;
+    height: 80vh;
+    order: 0;
+  }
+}
 </style>
