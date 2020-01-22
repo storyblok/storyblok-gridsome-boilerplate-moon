@@ -1,10 +1,5 @@
 <template>
   <g-link class="link" v-bind="$props">
-    <img
-      src="../assets/images/arrow-icon-large.png"
-      alt=""
-    />
-
     <span>{{ name }}</span>
   </g-link>
 </template>
@@ -17,14 +12,4 @@ export default {
 </script>
 
 <style>
-.link {
-  color: #2c2c2c;
-  display: flex;
-  align-items: center;
-}
-
-.link img {
-  max-width: 30px;
-  margin-right: 15px;
-}
 </style>

@@ -6,14 +6,15 @@
       <li 
         v-for="item in blok.map" 
         :key="item.id"> 
-          <a :href="item.link.url">
+          <g-link :to="item.link.url">
             {{item.name}}
-          </a>
+          </g-link>
       </li>
     </ul>
     
-
-    <button class="footer-btn"><a class="footer-contact_us" :href="blok.contact_link.cached_url">Contact Us</a></button>
+    <g-link class="button" :to="blok.contact_link.cached_url">
+      Contact Us
+    </g-link>
   </footer>
 </template>
 
@@ -53,15 +54,5 @@ export default {
   width: 265px;
   height: 70px;
   background-color: #2c2c2c;
-}
-
-.footer-btn .footer-contact_us {
-  font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #ffffff;
 }
 </style>

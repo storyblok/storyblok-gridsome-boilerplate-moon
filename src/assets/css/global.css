@@ -16,3 +16,22 @@ a {
 .container {
   max-width: 1200px;
 }
+
+.button {
+  display: block;
+  max-width: 200px;
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #2c2c2c;
+  border-radius: 40px;
+  color: #2c2c2c;
+  text-align: center;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #2c2c2c;
+  color: #fff;
+}

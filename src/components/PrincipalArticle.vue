@@ -14,7 +14,7 @@
         {{ blok.description }}
       </h3>
 
-      <Link :to="blok.link.cached_url" name="Read Article" />
+      <g-link :to="blok.link.cached_url" class="button">Read Article</g-link>
     </div>
 
     <div class="principal-article__right" />
