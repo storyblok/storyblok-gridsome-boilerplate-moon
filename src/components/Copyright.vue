@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="copyright">
-      <img class="copyright-image" :src="blok.logo.url" alt="">
+      <a href="https://storyblok.com"> 
+        <img class="copyright-image" :src="blok.logo.url" alt="">
+      </a>
     </div>
   </div>
 </template>

@@ -28,7 +28,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .navigation ul {
   display: flex;
   justify-content: space-between;
@@ -40,5 +40,9 @@ export default {
 .navigation li {
   font-size: 16px;
   font-weight: 600;
+}
+
+.navigation li:hover {
+  color: $secondary-color;
 }
 </style>

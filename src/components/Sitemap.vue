@@ -1,12 +1,11 @@
 <template>
   <footer class="footer">
     <CImage :image="blok.logo" />
-    
     <ul class="footer-links">
       <li 
         v-for="item in blok.map" 
         :key="item.id"> 
-          <g-link :to="item.link.url">
+          <g-link :to="item.link.cached_url">
             {{item.name}}
           </g-link>
       </li>
@@ -41,6 +40,10 @@ export default {
 
 .footer .footer-links {
   margin: 0 $desktop-grid-gap; 
+}
+
+.footer-links li:hover {
+  color: $secondary-color;
 }
 
 @media (max-width: 762px) {

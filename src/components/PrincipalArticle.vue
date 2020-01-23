@@ -13,7 +13,7 @@
       <h3 class="principal-article__description">
         {{ blok.description }}
       </h3>
-
+      
       <g-link :to="blok.link.cached_url" class="button is-primary">
         Read Article
       </g-link>
