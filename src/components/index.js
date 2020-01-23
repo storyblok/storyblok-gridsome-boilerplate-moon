@@ -1,6 +1,7 @@
-import CImage from './CImage.vue'
 import Page from './Page.vue'
 import Team from './Team.vue'
+import CImage from './CImage.vue'
+import CInput from './CInput.vue'
 import Teaser from './Teaser.vue'
 import Sitemap from './Sitemap.vue'
 import Metrics from './Metrics.vue'
@@ -20,10 +21,11 @@ import BlogSection from './BlogSection.vue'
 import Container from './Container.vue'
 
 export default {
-  CImage,
   Page,
   Team,
   Teaser,
+  CImage,
+  CInput,
   Metrics,
   Sitemap,
   TeamCard,

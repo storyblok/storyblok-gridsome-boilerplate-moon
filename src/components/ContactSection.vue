@@ -3,33 +3,37 @@
     <img :src="blok.image.url" alt="" class="contact-us-right" />
     
     <div class="contact-us-left">
-      <h1 class="contact-us-left__title">{{blok.title}}</h1>
+      <h1 class="contact-us-left__title">
+        {{ blok.title }}
+      </h1>
       <div class="contact-us-left__divisor" />
+
       <div class="contact-us-left-container">
-        
-        <!-- <label for="input_name" class="contact-us-left__label" >Name</label> -->
-        <input 
-          id="input_name"
-          class="contact-us-left-container__input" 
-          type="text" 
+        <CInput
+          id="name"
           placeholder="Enter your name here"
+          type="text"
+          v-model="name"
+          label="Name"
         />
-        
-        <!-- <label for="input_email" class="contact-us-left__label" >Email</label> -->
-        <input 
-          id="input_email"
-          class="contact-us-left-container__input" 
-          type="text" 
+
+        <CInput
+          id="email"
           placeholder="Enter your work email here"
+          type="email"
+          v-model="email"
+          label="Email"
         />
-        
-        <!-- <label for="input_company" class="contact-us-left__label" >Company name</label> -->
-        <input 
-          id="input_company"
-          class="contact-us-left-container__input" 
-          type="text" 
+
+        <CInput
+          id="company"
           placeholder="Enter your company name here"
+          type="text"
+          v-model="company"
+          label="Company"
         />
+
+        <button class="button is-primary"> Submit </button>
       </div>
     </div>
 
@@ -38,10 +42,16 @@
 <script>
 export default {
   name: 'ContactSection',
-  props: ['blok']
+  props: ['blok'],
+  data: () => ({
+    name: '',
+    email: '',
+    company: ''
+  })
 }
 </script>
-<style>
+
+<style lang="scss">
 .contact-us {
   width: 100%;
   display: flex;
@@ -67,44 +77,23 @@ export default {
   font-weight: 600;
 }
 
+.contact-us-left__divisor {
+  margin: $desktop-grid-gap 0;
+  width: 142px;
+  height: 3px;
+  background-color: $primary-color;
+}
+
 .contact-us-left-container {
   width: 100%;
-  display: inline-grid;
 }
 
-.contact-us-left-container__input {
-  font-size: 16px;
-  width: 85%;
-  height: 77px;
-  border-radius: 3px;
-  border: solid 1px #e5e5e5;
-  background-color: #ffffff;
-  margin-bottom: 30px;
-  transition: all .2s ease-in-out;
-}
-.contact-us-left-container__input::-webkit-input-placeholder  {
-  color: #cdcdcd;
+.contact-us-left-container .field {
+  margin-bottom: $desktop-grid-gap;
 }
 
-.contact-us-left-container__input:focus {
-   border: solid 1px #ccb48b;
-}
-
-.contact-us-left__label {
-  position: absolute;
-  display: block;
-  font-weight: normal;
-  left: 0;
-  margin: 0;
-  padding: 18px 12px 0;
-  top: 0;
-}
-
-.contact-us-left__divisor {
-  margin: 40px 0;
-  width: 142px;
-  height: 5px;
-  background-color: #2c2c2c;
+.contact-us-left-container .button {
+  margin: 0 0 0 auto;
 }
 
 @media (max-width: 762px) {
