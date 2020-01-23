@@ -1,6 +1,11 @@
 <template>
   <section class="blog-section">
-    <p class="blog-section__text">{{blok.first_paragraph}}</p>
+
+    <div class="blog-section__first">
+      <p class="blog-section__first__text">{{blok.first_paragraph.substring(0,1)}}</p>
+      <p class="blog-section__first__text">{{blok.first_paragraph.substring(1,)}}</p>
+    </div>
+
     <p class="blog-section__text">{{blok.second_paragraph}}</p>
     <p class="blog-section__text">{{blok.third_paragraph}}</p>
 
@@ -16,7 +21,7 @@
 <script>
 export default {
   name: 'BlogSection',
-  props: ['blok']
+  props: ['blok'],
 }
 </script>
 <style>
@@ -38,5 +43,22 @@ export default {
   width: 100%;
 }
 
+.blog-section__first {
+  display: flex;
+  height: auto;
+}
+
+.blog-section__first__text:first-child {
+  margin: 0;
+  font-size: 70px;
+  font-weight: 600;
+  color: black;
+}
+
+.blog-section__first__text {
+  margin: 30px 0 0 10px;
+  display: inline;
+  color: #5c5c5c;
+} 
 
 </style>

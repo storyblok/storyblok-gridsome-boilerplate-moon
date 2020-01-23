@@ -19,6 +19,7 @@ import ContactSection from './ContactSection.vue'
 import ContactInformation from './ContactInformation.vue'
 import BlogSection from './BlogSection.vue'
 import Container from './Container.vue'
+import Blog from './Blog'
 
 export default {
   Page,
@@ -42,5 +43,6 @@ export default {
   ContactInformation,
   ContactSection,
   BlogSection,
-  Container
+  Container,
+  Blog
 }
