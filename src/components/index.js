@@ -16,6 +16,8 @@ import ArticlesSection from './ArticlesSection.vue'
 import PrincipalArticle from './PrincipalArticle.vue'
 import ContactSection from './ContactSection.vue'
 import ContactInformation from './ContactInformation.vue'
+import BlogSection from './BlogSection.vue'
+import Container from './Container.vue'
 
 export default {
   Logo,
@@ -37,4 +39,6 @@ export default {
   PrincipalArticle,
   ContactInformation,
   ContactSection,
+  BlogSection,
+  Container
 }
