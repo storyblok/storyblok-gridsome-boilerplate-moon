@@ -1,8 +1,7 @@
 <template>
   <div>
     <div class="copyright">
-      <p class="copyright-title">Powered by</p>
-      <img class="copyright-image" src="../assets/images/colored-full.svg" alt="">
+      <img class="copyright-image" :src="blok.logo.url" alt="">
     </div>
   </div>
 </template>
@@ -15,11 +14,6 @@ export default {
 </script>
 
 <style>
-.copyright-title {
-  color: #bfc4cb;
-  font-size: 12px;
-  margin-bottom: 5px;
-}
 .copyright {
   margin-top: 150px;
   text-align: center;
@@ -27,7 +21,7 @@ export default {
 }
 .copyright-image {
   width: 91px;
-  height: 20px;
+  height: auto; 
 }
 
 </style>
