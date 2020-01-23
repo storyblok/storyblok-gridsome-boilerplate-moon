@@ -14,7 +14,9 @@
         {{ blok.description }}
       </h3>
 
-      <g-link :to="blok.link.cached_url" class="button">Read Article</g-link>
+      <g-link :to="blok.link.cached_url" class="button is-primary">
+        Read Article
+      </g-link>
     </div>
 
     <img :src="blok.image" class="principal-article__right" />
@@ -35,7 +37,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .principal-article {
   width: 100%;
   height: 100vh;
@@ -44,14 +46,13 @@ export default {
 
 .principal-article__left {
   width: 50%;
-  padding: 70px;
+  padding: $desktop-container-spacing;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .principal-article__right {
-  background-color: #ededed;
   width: 50%;
   height: 100%;
 }
@@ -59,7 +60,7 @@ export default {
 .principal-article__published {
   margin-bottom: 10px;
   font-size: 16px;
-  color: #a6a6a6;
+  color: $light-text-color;
 }
 
 .principal-article__title {
@@ -68,17 +69,17 @@ export default {
 }
 
 .principal-article__divisor {
-  margin: 40px 0;
+  margin: $desktop-grid-gap 0;
   width: 142px;
-  height: 5px;
-  background-color: #2c2c2c;
+  height: 2px;
+  background-color: $primary-color;
 }
 
 .principal-article__description {
   font-size: 16px;
-  color: #a6a6a6;
+  color: $blog-text-color;
   line-height: 1.63;
-  margin-bottom: 50px;
+  margin-bottom: $desktop-grid-gap;
 }
 
 @media screen and (max-width: 762px) {
@@ -90,14 +91,18 @@ export default {
 
   .principal-article__left {
     width: 100%;
-    padding: 40px;
+    padding: $mobile-container-spacing;
     order: 1;
   }
 
   .principal-article__right {
     width: 100%;
-    height: 80vh;
     order: 0;
+  }
+
+  .principal-article__title {
+    font-size: 48px;
+    font-weight: 600;
   }
 }
 </style>

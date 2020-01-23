@@ -32,14 +32,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .about-content {
-  padding: 40px 70px 70px 70px;
+  padding: $desktop-container-spacing;
 }
 
 .about-content__headlines {
   max-width: 700px;
-  margin: 0 auto 60px auto;
+  margin: 0 auto $desktop-grid-gap * 2 auto;
 }
 
 .about-content__title {
@@ -51,7 +51,7 @@ export default {
 .about-content__divisor {
   max-width: 150px;
   height: 2px;
-  margin: 40px auto;
+  margin: $desktop-grid-gap auto;
   background-color: #2c2c2c;
 }
 
@@ -90,7 +90,7 @@ export default {
 }
 
 .about-content__markdown {
-  padding: 70px 70px 0 0;
+  padding: $desktop-grid-gap $desktop-grid-gap 0 0;
 }
 
 .about-content__markdown p:first-of-type {
@@ -99,7 +99,7 @@ export default {
 
 @media screen and (max-width: 762px) {
   .about-content {
-    padding: 20px;
+    padding: $mobile-container-spacing;
   }
 
   .about-content__grid {
@@ -116,7 +116,7 @@ export default {
   .about-content__image {
     width: 100%;
     order: 0;
-    margin-bottom: 20px;
+    margin-bottom: $mobile-grid-gap;
   }
 
   .about-content__markdown {

@@ -21,32 +21,31 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .team {
-  padding: 70px;
+  padding: $desktop-container-spacing;
 }
 
 .team__title {
   font-size: 45px;
   font-weight: 600;
-  margin-bottom: 50px;
+  margin-bottom: $desktop-grid-gap;
 }
 
 .team__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 70px;
+  grid-gap: $desktop-grid-gap;
 }
 
 @media screen and (max-width: 762px) {
   .team {
-    padding: 20px;
+    padding: $mobile-container-spacing;
   }
 
   .team__grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 70px;
   }
 }
 </style>

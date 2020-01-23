@@ -1,3 +1,5 @@
+@import './variables';
+
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap');
 
 /* global styles */
@@ -7,8 +9,8 @@
 
 body {
   font-family: 'Work Sans', sans-serif;
-  color: #2c2c2c;
-  line-height: 1.63;
+  color: $primary-color;
+  line-height: 1.5;
 }
 
 a {
@@ -21,21 +23,25 @@ a {
   max-width: 1200px;
 }
 
+// button
 .button {
   display: block;
   max-width: 200px;
   width: 100%;
   padding: 15px;
-  border: 2px solid #2c2c2c;
   border-radius: 40px;
-  color: #2c2c2c;
   text-align: center;
   transition: all 0.3s ease;
   outline: none;
 }
 
-.button:hover,
-.button:focus {
-  background-color: #2c2c2c;
-  color: #fff;
+.button.is-primary {
+  border: 2px solid $primary-color;
+  color: $primary-color;
+}
+
+.button.is-primary:hover,
+.button.is-primary:focus {
+  background-color: $primary-color;
+  color: invert($primary-color);
 }

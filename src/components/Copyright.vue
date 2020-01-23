@@ -13,15 +13,21 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .copyright {
-  margin-top: 150px;
+  padding: $desktop-container-spacing;
   text-align: center;
   margin-bottom: 30px;
 }
+
 .copyright-image {
   width: 91px;
   height: auto; 
 }
 
+@media (max-width: 762px) {
+  .copyright {
+    padding: $mobile-container-spacing;
+  }
+}
 </style>

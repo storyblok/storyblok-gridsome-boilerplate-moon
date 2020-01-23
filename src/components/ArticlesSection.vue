@@ -19,32 +19,31 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .articles-section {
-  padding: 70px;
+  padding: $desktop-container-spacing;
 }
 
 .articles-section__title {
   font-size: 40px;
-  color: #ededed;
-  margin-bottom: 60px;
+  color: $primary-color;
+  margin-bottom: $desktop-grid-gap;
 }
 
 .article-section__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 70px;
+  grid-gap: $desktop-grid-gap;
 }
 
 @media screen and (max-width: 762px) {
   .articles-section {
-    padding: 40px;
+    padding: $mobile-container-spacing;
   }
 
   .article-section__grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 70px;
   }
 }
 </style>

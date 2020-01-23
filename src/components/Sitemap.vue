@@ -12,7 +12,7 @@
       </li>
     </ul>
     
-    <g-link class="button" :to="blok.contact_link.cached_url">
+    <g-link class="button is-primary" :to="blok.contact_link.cached_url">
       Contact Us
     </g-link>
   </footer>
@@ -25,16 +25,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .footer {
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  display: flex;
   width: 100%;
-  height: 104px;
-  line-height: 1.63;
   letter-spacing: normal;
 }
 .footer .c-image {
@@ -42,32 +40,20 @@ export default {
 }
 
 .footer .footer-links {
-  margin-right: 220px;
-  margin-left: 100px; 
-}
-
-.footer-btn {
-  width: 265px;
-  height: 70px;
-  background-color: #2c2c2c;
+  margin: 0 $desktop-grid-gap; 
 }
 
 @media (max-width: 762px) {
   .footer {
     flex-direction: column;
+    padding: $mobile-container-spacing;
   }
 
-  .footer .footer-links {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  .footer-links {
+    padding: $mobile-grid-gap * 2 0;
     margin-left: 0;
     margin-right: 0;
     margin: 0 auto;
-  }
-
-  .footer .logo {
-    margin-top: 20px;
-    max-width: 120px;
   }
 }
 </style>

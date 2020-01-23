@@ -29,28 +29,36 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .article-card__image {
   width: 100%;
   min-height: 260px;
-  background-color: #ededed;
 }
 
 .article-card__title {
-  color: #2c2c2c;
   font-size: 40px;
-  margin: 20px 0;
+  margin: $desktop-grid-gap 0;
 }
 
 .article-card__description {
   font-size: 16px;
-  line-height: 1.63;
-  color: #a6a6a6;
-  margin-bottom: 20px;
+  color: $blog-text-color;
+  margin-bottom: $desktop-grid-gap;
 }
 
 .article-card__published {
   font-size: 16px;
-  color: #a6a6a6;
+  color: $light-text-color;
+}
+
+@media screen and (max-width: 762px) {
+  .article-card__title {
+    font-size: 28px;
+    margin: $mobile-grid-gap 0;
+  }
+
+  .article-card__description {
+    margin-bottom: $mobile-grid-gap;
+  }
 }
 </style>

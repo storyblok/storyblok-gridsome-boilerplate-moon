@@ -1,11 +1,17 @@
 <template>
-  <div>
-    <MetricCard :source="blok.columns"/>
+  <div class="metrics">
+    <div
+      class="metric__column"
+      v-for="item in blok.columns"
+      :key="item.id">
+      <MetricCard :source="item" />
+    </div>
   </div>
 </template>
 
 <script>
 import MetricCard from './MetricCard'
+
 export default {
   name: 'Metrics',
   components: {
@@ -15,6 +21,26 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+.metrics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $desktop-container-spacing * 2;
+}
 
+.metric__column {
+  margin: 0 $desktop-grid-gap;
+}
+
+@media screen and (max-width: 762px) {
+  .metrics {
+    flex-direction: column;
+    padding: $mobile-container-spacing * 2;
+  }
+
+  .metric__column {
+    margin: $mobile-grid-gap 0;
+  }
+}
 </style>

@@ -19,22 +19,26 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .team-card__image {
   width: 100%;
   min-height: 300px;
-  background-color: #ededed;
-  margin-bottom: 50px;
 }
 
 .team-card__title {
   color: #2c2c2c;
   font-size: 40px;
-  margin-bottom: 20px;
+  margin: $desktop-grid-gap 0;
 }
 
 .team-card__description {
   font-size: 16px;
-  color: #a6a6a6;
+  color: $light-text-color;
+}
+
+@media screen and (max-width: 762px) {
+  .team-card__title {
+    margin: $mobile-grid-gap 0;
+  }
 }
 </style>
