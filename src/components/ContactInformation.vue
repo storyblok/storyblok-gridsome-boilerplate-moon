@@ -10,11 +10,9 @@ export default {
   props: ['blok']
 }
 </script>
-<style>
+<style lang="scss">
 .contact-information {
-  margin: 0 auto;
-  width: 90%;
-  height: 40px;
+  padding: $desktop-container-spacing;
 }
 
 .contact-information_title {
@@ -27,5 +25,11 @@ export default {
   font-size: 16px;
   color: #2c2c2c;
   margin-top: 30px;
+}
+
+@media (max-width: 762px) {
+  .contact-information {
+    padding: $mobile-container-spacing;
+  }
 }
 </style>

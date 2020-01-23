@@ -59,14 +59,12 @@ export default {
   flex-direction: row-reverse;
   padding-bottom: 20px;
 }
-.contact-us-left {
-  width: 60%; 
-  margin-left: 50px;
-  margin-right: 50px;
+.contact-us-left { 
+  padding: 0 $desktop-grid-gap;
 }
 
 .contact-us-right {
-  width: 50%;
+  width: 60%;
   max-width: 488px;
   height: auto;
   background-color: #ededed;
@@ -104,6 +102,11 @@ export default {
     text-align: center;
   }
 
+  .contact-us-left__title {
+    font-size: 48px;
+    font-weight: 600;
+  }
+
   .contact-us-right {
     margin: 0 auto;
     width: 100%;
@@ -111,24 +114,22 @@ export default {
     align-items: center;
   }
 
-  .contact-us-left-container__input {
-    margin-left: 50px;
-    width: 80%;
+  .contact-us-left {
+    padding: $mobile-container-spacing;
   }
 
-  .contact-us-right, .contact-us-left{
+  .contact-us-right,
+  .contact-us-left {
     margin: 0;
     width: 100%;
   }
 
-  .contact-us-left__title {
-    padding-top: 10px;
-    margin: 0;
-  }
-
   .contact-us-left__divisor {
-    margin-left: 50px;
+    margin: $mobile-grid-gap * 3 auto;
   }
 
+  .contact-us-left-container .field {
+    margin-bottom: $mobile-grid-gap;
+  }
 }
 </style>
