@@ -1,6 +1,6 @@
 <template>
   <header class="teaser">
-    <Logo :image="blok.logo" />
+    <CImage :image="blok.logo" />
     <Navigation :items="blok.navigation" />
   </header>
 </template>
@@ -16,7 +16,7 @@ export default {
   padding: 50px 70px;
 }
 
-.teaser .logo {
+.teaser .c-image {
   max-width: 180px;
   margin: 0 auto 50px auto;
 }
@@ -26,7 +26,7 @@ export default {
     padding: 40px;
   }
 
-  .teaser .logo {
+  .teaser .c-image {
     margin-bottom: 40px;
   }
 }

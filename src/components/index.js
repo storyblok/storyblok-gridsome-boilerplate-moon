@@ -1,4 +1,4 @@
-import Logo from './Logo.vue'
+import CImage from './CImage.vue'
 import Page from './Page.vue'
 import Team from './Team.vue'
 import Teaser from './Teaser.vue'
@@ -20,7 +20,7 @@ import BlogSection from './BlogSection.vue'
 import Container from './Container.vue'
 
 export default {
-  Logo,
+  CImage,
   Page,
   Team,
   Teaser,

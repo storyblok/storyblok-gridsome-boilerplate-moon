@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <Logo :image="blok.logo" />
+    <CImage :image="blok.logo" />
     
     <ul class="footer-links">
       <li 
@@ -19,13 +19,9 @@
 </template>
 
 <script>
-import Logo from './Logo'
 export default {
   name: 'Footer',
-  props: ['blok'],
-  components: {
-    Logo
-  }
+  props: ['blok']
 }
 </script>
 
@@ -41,7 +37,7 @@ export default {
   line-height: 1.63;
   letter-spacing: normal;
 }
-.footer .logo {
+.footer .c-image {
   max-width: 120px;
 }
 

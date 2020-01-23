@@ -27,7 +27,7 @@ export default {
 }
 
 .team__title {
-  font-size: 30px;
+  font-size: 45px;
   font-weight: 600;
   margin-bottom: 50px;
 }
@@ -40,7 +40,7 @@ export default {
 
 @media screen and (max-width: 762px) {
   .team {
-    padding: 40px;
+    padding: 20px;
   }
 
   .team__grid {

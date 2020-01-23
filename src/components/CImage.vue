@@ -1,12 +1,12 @@
 <template>
-  <figure class="logo">
+  <figure class="c-image">
     <g-image :src="imageURL" />
   </figure>
 </template>
 
 <script>
 export default {
-  name: 'Logo',
+  name: 'CImage',
   props: ['image'],
   computed: {
     imageURL () {
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style>
-.logo img {
+.c-image img {
   max-width: 100%;
 }
 </style>
