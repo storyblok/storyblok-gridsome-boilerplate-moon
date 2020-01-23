@@ -1,7 +1,6 @@
 <template>
   <div class="article-card">
-    <div class="article-card__image"></div>
-
+    <img :src="blok.image.url" alt="" class="article-card__image">
     <h3 class="article-card__title">
       {{ blok.title }}
     </h3>

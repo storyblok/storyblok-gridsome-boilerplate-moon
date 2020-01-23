@@ -2,9 +2,7 @@
   <div class="call-to-about">
     <div class="call-to-about-mask"></div>
     
-    <div class="call-to-about-image">
-      <!-- <img :src="blok.image.url" alt=""> -->
-    </div>
+    <img class="call-to-about-image" :src="blok.image" alt="">
 
     <div class="call-to-about-section">
       <h2 class="call-to-about-section_title">{{blok.title}}</h2>

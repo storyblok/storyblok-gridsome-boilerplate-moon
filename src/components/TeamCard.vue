@@ -1,6 +1,6 @@
 <template>
   <div class="team-card">
-    <div class="team-card__image"></div>
+    <img :src="blok.image.url" alt="" class="team-card__image">
 
     <h3 class="team-card__title">
       {{ blok.name }}

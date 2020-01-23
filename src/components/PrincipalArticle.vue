@@ -17,7 +17,7 @@
       <g-link :to="blok.link.cached_url" class="button">Read Article</g-link>
     </div>
 
-    <div class="principal-article__right" />
+    <img :src="blok.image" class="principal-article__right" />
   </section>
 </template>
 
