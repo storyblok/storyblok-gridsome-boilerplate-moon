@@ -19,9 +19,19 @@ export default {
 }
 
 .divisor {
-  margin: 0 auto;
-  width: 142px;
+  margin: $mobile-grid-gap * 2 auto;
+  width: 150px;
   height: 2px;
   background-color: $primary-color;
+}
+
+@media screen and (max-width: $mobile) {
+  .blog {
+    margin-top: $desktop-container-spacing;
+  }
+
+  .blog__title {
+    font-size: 35px;
+  }
 }
 </style>

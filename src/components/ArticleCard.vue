@@ -1,6 +1,9 @@
 <template>
   <div class="article-card">
-    <img :src="blok.image.url" alt="" class="article-card__image">
+    <figure class="article-card__image">
+      <img :src="blok.image.url" alt="">
+    </figure>
+
     <h3 class="article-card__title">
       {{ blok.title }}
     </h3>
@@ -55,6 +58,17 @@ $svg-width: 60px;
 .article-card__image {
   width: 100%;
   min-height: 260px;
+  overflow: hidden;
+}
+
+.article-card__image img {
+  max-width: 100%;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.article-card:hover img {
+  transform: scale(1.1);
 }
 
 .article-card__title {
