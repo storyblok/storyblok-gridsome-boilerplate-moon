@@ -2,17 +2,12 @@
   <div class="blog">
     <h1 class="blog__title">{{blok.title}}</h1>
     <div class="divisor" />
-    <!-- <ArticlesSection /> -->
   </div>
 </template>
 <script>
-// import ArticlesSection from './ArticlesSection'
 export default {
   name: 'Blog',
-  props: ['blok'],
-  // components: {
-  //   ArticlesSection
-  // }
+  props: ['blok']
 }
 </script>
 <style lang="scss">

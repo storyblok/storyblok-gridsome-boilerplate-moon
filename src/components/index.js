@@ -21,7 +21,9 @@ import BlogPostContent from './BlogPostContent.vue'
 // import Container from './Container.vue'
 import BlogPost from './BlogPost.vue'
 import BlogPostHeader from './BlogPostHeader.vue'
-import Blog from './Blog'
+// import BlogSection from './BlogSection.vue'
+import Blog from './Blog.vue'
+import BlogCard from './BlogCard.vue'
 
 export default {
   Page,
@@ -48,5 +50,7 @@ export default {
   // Container,
   BlogPost,
   BlogPostHeader,
-  Blog
+  // BlogSection,
+  Blog,
+  BlogCard
 }
