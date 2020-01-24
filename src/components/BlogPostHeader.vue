@@ -91,12 +91,35 @@ export default {
   margin-top: 10px;
 }
 
-@media (max-width: 800px) {
-  .blog-post-header__text { 
-    top: 35%;
+@media (max-width: $mobile) {
+  .blog-post-header {
+    display: block;
   }
+
+  .blog-post-header__image:first-of-type {
+    display: none; 
+  }
+
+  .blog-post-header__image {
+    width: 100%;
+    position: relative;
+  }
+
+  .blog-post-header__text {
+    color: $primary-color;
+    padding: $desktop-grid-gap $mobile-container-spacing;
+  }
+
   .blog-post-header__text__title {
     font-size: 35px;
+  }
+
+  .blog-post-header__text__divisor {
+    background-color: $primary-color;
+  }
+
+  .blog-post-header .arrow-down-icon {
+    display: none;
   }
 }
 
