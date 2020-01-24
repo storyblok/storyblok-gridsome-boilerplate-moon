@@ -50,6 +50,7 @@ export default {
   top: 0;
   right: 0;
   width: 50%;
+  background-color: $backgroud-blog-image-color;
   filter: brightness(60%);
 }
 
