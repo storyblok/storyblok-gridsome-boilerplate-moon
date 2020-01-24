@@ -37,12 +37,32 @@ export default {
   text-transform: capitalize;
 }
 
-.navigation li {
+.navigation .link {
+  position: relative;
   font-size: 16px;
   font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  outline: none;
 }
 
-.navigation li:hover {
+.navigation .link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: -10%;
+  width: 0;
+  height: 2px;
+  background-color: $secondary-color;
+  transition: all 0.3s ease-in-out;
+}
+
+.navigation .link:hover,
+.link.active--exact {
   color: $secondary-color;
+}
+
+.navigation .link:hover::after,
+.link.active--exact::after {
+  width: 120%;
 }
 </style>
