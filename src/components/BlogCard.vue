@@ -13,7 +13,7 @@
             {{item.description}}
           </p>
           <p class="blog-card__text-container__date">
-            {{item.date}}
+            Space {{articlePublished}}
           </p>
         </div>
       </div>
@@ -21,9 +21,15 @@
   </div>
 </template>
 <script>
+import { getPublishedFormatDate } from '../utils/article'
 export default {
   name: 'BlogCard',
-  props: ['blok']
+  props: ['blok'],
+  computed: {
+    articlePublished () {
+      return getPublishedFormatDate(this.blok)
+    }
+  }
 }
 </script>
 <style>
