@@ -10,6 +10,16 @@
           </g-link>
       </li>
     </ul>
+
+    <ul class="footer-links footer-articles">
+      <li 
+        v-for="item in blok.articles" 
+        :key="item.id"> 
+          <g-link :to="item.link.cached_url">
+            {{item.name}}
+          </g-link>
+      </li>
+    </ul>
     
     <g-link class="button is-primary" :to="blok.contact_link.cached_url">
       Contact Us
@@ -57,6 +67,10 @@ export default {
     margin-left: 0;
     margin-right: 0;
     margin: 0 auto;
+  }
+
+  .footer-articles {
+    text-align: center;
   }
 }
 </style>
