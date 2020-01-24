@@ -13,3 +13,7 @@ $desktop-grid-gap: 40px;
 $mobile-container-spacing: 20px;
 $mobile-inner-spacing: 10px;
 $mobile-grid-gap: 10px;
+
+// breakpoints
+$mobile: 768px;
+$desktop: $mobile + 1px;

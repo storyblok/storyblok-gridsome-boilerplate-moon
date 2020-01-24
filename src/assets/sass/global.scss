@@ -16,6 +16,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  outline: none;
 }
 
 /* utilities */
@@ -44,4 +45,21 @@ a {
 .button.is-primary:focus {
   background-color: $primary-color;
   color: invert($primary-color);
+}
+
+@media screen and (max-width: $mobile) {
+  .only-desktop {
+    display: none;
+  }
+
+  .button {
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .only-mobile {
+    display: none;
+  }
 }

@@ -6,9 +6,16 @@
 
     <div class="call-to-about-section">
       <h2 class="call-to-about-section_title">{{blok.title}}</h2>
+
       <p class="call-to-about-section_description">{{blok.description}}</p>
+
+      <g-link
+        class="link button is-primary"
+        to="/about"
+      >
+        Check out!
+      </g-link>
     </div>
-    
   </div>
 </template>
 
@@ -30,6 +37,11 @@ export default {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+
+.call-to-about .link {
+  margin-top: 20px;
 }
 
 .call-to-about-mask {
@@ -56,8 +68,9 @@ export default {
 }
 
 .call-to-about-section_title {
-  font-size: 40px;
-  font-weight: 500;
+  font-size: 65px;
+  font-weight: 800;
+  line-height: 1.15;
   color: $primary-color;
   margin-top: $desktop-grid-gap;
 }
