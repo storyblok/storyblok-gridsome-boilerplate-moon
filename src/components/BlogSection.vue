@@ -18,16 +18,20 @@
     <p class="blog-section__text">{{blok.five_paragraph}}</p>
   </section>
 </template>
+
 <script>
 export default {
   name: 'BlogSection',
   props: ['blok'],
 }
 </script>
-<style>
+
+<style lang="scss">
 .blog-section {
-  width: 60%;
+  widows: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: $desktop-container-spacing;
 }
 
 .blog-section__text {

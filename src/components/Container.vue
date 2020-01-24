@@ -1,79 +1,96 @@
 <template>
-  <div class="container">
-    <img class="container__image" :src="blok.image.url" alt="">
-    <img class="container__image" :src="blok.image.url" alt="">
+  <div class="blog-post-header">
+    <img class="blog-post-header__image" :src="blok.image.url" alt="">
+    <img class="blog-post-header__image" :src="blok.image.url" alt="">
     
-    <div class="container__text">
-      <p class="container__text__title">{{blok.title}}</p>
+    <div class="blog-post-header__text">
+      <p class="blog-post-header__text__title">{{blok.title}}</p>
       <div class="conatiner__text__divisor" />
-      <p class="container__text__resume">{{blok.resume}}</p>
+      <p class="blog-post-header__text__resume">{{blok.resume}}</p>
     </div>
 
+    <img
+      class="arrow-down-icon"
+      src="../assets/images/arrow-down-icon.svg"
+      alt=""
+    >
   </div>
 </template>
+
 <script>
 export default {
-  name: 'Container',
+  name: 'BlogPostHeader',
   props: ['blok']
 }
 </script>
-<style>
-.container {
-  max-width: 100% !important;
-  flex: 1;
+
+<style lang="scss">
+.blog-post-header {
+  position: relative;
   width: 100%;
+  min-height: 100vh;
   display: flex;
-  margin: 0 auto;
-  background-color: rgb(148, 144, 144);
+  justify-content: center;
+  align-items: center;
 }
 
-.container__image {
-  filter: brightness(60%);
-  width: 50%;
-}
-
-.container__image:first-child {
-  transform: scaleX(-1);
-}
-
-.container__text {
-  color: #fff;
+.blog-post-header__image {
   position: absolute;
-  margin: 0 auto;
-  left: 30%;
-  right: 30%;
-  top: 50% ;
-  text-align: center;
+  top: 0;
+  right: 0;
+  width: 50%;
+  filter: brightness(60%);
 }
 
-.container__text__title {
+.blog-post-header__image:first-child {
+  transform: scaleX(-1);
+  top: 0;
+  left: 0;
+}
+
+.blog-post-header__text {
+  max-width: 700px;
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+}
+
+.blog-post-header__text__title {
   font-size: 70px;
   font-weight: 600;
   margin-bottom: 10px;
+  line-height: 1.15;
 }
 
 .conatiner__text__divisor {
-  margin: 0 auto;
-  width: 142px;
+  margin: $desktop-grid-gap auto;
+  width: 150px;
   height: 2px;
   background-color: #FFF;
 }
 
-.container__text__resume {
+.blog-post-header .arrow-down-icon {
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  transform: translateX(-50%);
+}
+
+.blog-post-header__text__resume {
   margin-top: 10px;
 }
 
 @media (max-width: 800px) {
-  .container__text { 
+  .blog-post-header__text { 
     top: 35%;
   }
-  .container__text__title {
+  .blog-post-header__text__title {
     font-size: 35px;
   }
 }
 
 @media (max-width: 1100px) {
-  .container__text__title {
+  .blog-post-header__text__title {
     top: 35%;
     font-size: 50px;
   }
