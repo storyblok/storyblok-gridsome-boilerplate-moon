@@ -1,17 +1,23 @@
 <template>
   <div class="blog-post-header">
-    <img class="blog-post-header__image" :src="blok.image.url" alt="">
-    <img class="blog-post-header__image" :src="blok.image.url" alt="">
+    <img class="blog-post-header__image" :src="headerData.image.url" alt="">
+    <img class="blog-post-header__image" :src="headerData.image.url" alt="">
     
     <div class="blog-post-header__text">
-      <p class="blog-post-header__text__title">{{blok.title}}</p>
-      <div class="conatiner__text__divisor" />
-      <p class="blog-post-header__text__resume">{{blok.resume}}</p>
+      <h1 class="blog-post-header__text__title">
+        {{ headerData.title }}
+      </h1>
+
+      <div class="blog-post-header__text__divisor" />
+
+      <h2 class="blog-post-header__text__summary">
+        {{ headerData.summary }}
+      </h2>
     </div>
 
     <img
       class="arrow-down-icon"
-      src="../assets/images/arrow-down-icon.svg"
+      src="/arrow-down-icon.svg"
       alt=""
     >
   </div>
@@ -20,7 +26,12 @@
 <script>
 export default {
   name: 'BlogPostHeader',
-  props: ['blok']
+  props: ['blok'],
+  computed: {
+    headerData () {
+      return this.blok[0] || {}
+    }
+  }
 }
 </script>
 
@@ -62,7 +73,7 @@ export default {
   line-height: 1.15;
 }
 
-.conatiner__text__divisor {
+.blog-post-header__text__divisor {
   margin: $desktop-grid-gap auto;
   width: 150px;
   height: 2px;
@@ -76,7 +87,7 @@ export default {
   transform: translateX(-50%);
 }
 
-.blog-post-header__text__resume {
+.blog-post-header__text__summary {
   margin-top: 10px;
 }
 

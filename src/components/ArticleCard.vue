@@ -18,7 +18,7 @@
       :to="blok.link"
       :title="`Check out the post ${blok.title}`"
     >
-      <img src="../assets/images/more-ico.svg" alt="" />
+      <img src="/more-icon.svg" alt="" />
     </g-link>
 
     <g-link

@@ -17,8 +17,10 @@ import ArticlesSection from './ArticlesSection.vue'
 import PrincipalArticle from './PrincipalArticle.vue'
 import ContactSection from './ContactSection.vue'
 import ContactInformation from './ContactInformation.vue'
-import BlogSection from './BlogSection.vue'
-import Container from './Container.vue'
+import BlogPostContent from './BlogPostContent.vue'
+// import Container from './Container.vue'
+import BlogPost from './BlogPost.vue'
+import BlogPostHeader from './BlogPostHeader.vue'
 import Blog from './Blog'
 
 export default {
@@ -42,7 +44,9 @@ export default {
   PrincipalArticle,
   ContactInformation,
   ContactSection,
-  BlogSection,
-  Container,
+  BlogPostContent,
+  // Container,
+  BlogPost,
+  BlogPostHeader,
   Blog
 }
