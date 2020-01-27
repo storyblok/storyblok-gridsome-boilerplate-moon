@@ -94,7 +94,6 @@ export default {
 
 @media (max-width: $mobile) {
   .blog-post-header {
-    /* display: block; */
     background-size: cover;
   }
 
@@ -110,14 +109,6 @@ export default {
 
   .blog-post-header__text__title {
     font-size: 35px;
-  }
-
-  .blog-post-header__text__divisor {
-    /* background-color: $primary-color; */
-  }
-
-  .blog-post-header .arrow-down-icon {
-    /* display: none; */
   }
 }
 
