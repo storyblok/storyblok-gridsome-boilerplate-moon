@@ -12,7 +12,7 @@
       class="blog-card__image"
       :class="{ 'blog-card__image--reverse': reverse }"
     >
-      <img :src="item.image" alt="" />
+      <img :src="item.image" :alt="'Image of the ' + item.title" />
 
       <g-link :to="item.link.cached_url">
         <img class="only-desktop" src="/more-icon.svg" alt="" />

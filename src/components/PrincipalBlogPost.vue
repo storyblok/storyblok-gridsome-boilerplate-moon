@@ -14,8 +14,10 @@
       <h3 class="principal-blog-post__description">
         {{ blok.description }}
       </h3>
-      
-      <g-link :to="blok.link.cached_url" class="button is-primary">
+      <g-link 
+        :to="blok.link.cached_url" 
+        class="button is-primary" 
+        :alt="'Link to the post: ' + blok.title">
         Read Article
       </g-link>
     </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="article-card">
     <figure class="article-card__image">
-      <img :src="blok.image" alt="">
+      <img :src="blok.image" :alt="'Image of the' + blok.title">
     </figure>
 
     <g-link

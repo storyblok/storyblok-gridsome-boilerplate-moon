@@ -8,6 +8,7 @@
         <g-link
           :to="item.link.cached_url"
           class="link"
+          :title=" 'Link to ' + item.name + ' page'"
         >
           {{ item.name }}
         </g-link>

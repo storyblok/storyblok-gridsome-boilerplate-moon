@@ -5,7 +5,7 @@
       <li 
         v-for="item in blok.map" 
         :key="item.id"> 
-          <g-link :to="item.link.cached_url">
+          <g-link :to="item.link.cached_url" :title="'Link to the page ' + item.name">
             {{item.name}}
           </g-link>
       </li>
@@ -15,13 +15,17 @@
       <li 
         v-for="item in blok.blog_posts" 
         :key="item.id"> 
-          <g-link :to="item.link.cached_url">
+          <g-link :to="item.link.cached_url" :title="'Link to the post ' + item.name">
             {{item.name}}
           </g-link>
       </li>
     </ul>
     
-    <g-link class="button is-primary" :to="blok.contact_link.cached_url">
+    <g-link 
+      class="button is-primary" 
+      :to="blok.contact_link.cached_url" 
+      title="Link to the Contact Us page"
+    >
       Contact Us
     </g-link>
   </footer>

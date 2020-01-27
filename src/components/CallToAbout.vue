@@ -23,6 +23,7 @@
       <g-link
         class="link button is-primary only-mobile"
         to="/about"
+        title="Go to About page"
       >
         Check out!
       </g-link>

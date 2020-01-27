@@ -1,6 +1,10 @@
 <template>
   <div class="team-card">
-    <img :src="blok.image.url" alt="" class="team-card__image">
+    <img 
+      :src="blok.image.url" 
+      :alt="'Image of the astronaut ' + blok.name" 
+      class="team-card__image"
+    >
 
     <h3 class="team-card__title">
       {{ blok.name }}

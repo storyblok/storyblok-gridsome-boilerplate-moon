@@ -18,7 +18,7 @@
     <img
       class="arrow-down-icon"
       src="/arrow-down-icon.svg"
-      alt=""
+      alt="Icon of a arrow down"
     >
   </div>
 </template>
