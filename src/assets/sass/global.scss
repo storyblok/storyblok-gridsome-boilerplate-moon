@@ -1,6 +1,7 @@
 @import './variables';
 
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 /* global styles */
 * {
@@ -8,7 +9,7 @@
 }
 
 body {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: $primary-color;
   line-height: 1.5;
 }
@@ -21,7 +22,7 @@ a {
 
 /* utilities */
 .container {
-  max-width: 1200px;
+  max-width: 1440px;
 }
 
 // button
