@@ -34,7 +34,7 @@ export default {
 
 <style lang="scss">
 .about-content {
-  padding: $desktop-container-spacing;
+  padding: 0 $desktop-container-spacing $desktop-container-spacing;
 }
 
 .about-content__headlines {
@@ -57,7 +57,7 @@ export default {
 
 .about-content__subtitle {
   font-size: 16px;
-  color: #a6a6a6;
+  color: $blog-text-color;
 }
 
 .about-content__grid {
@@ -90,6 +90,9 @@ export default {
 }
 
 .about-content__markdown {
+  font-size: 16px;
+  color: $blog-text-color;
+  line-height: 26px;
   padding: $desktop-grid-gap $desktop-grid-gap 0 0;
 }
 

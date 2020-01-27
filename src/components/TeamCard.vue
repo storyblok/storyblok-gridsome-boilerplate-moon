@@ -26,19 +26,15 @@ export default {
 }
 
 .team-card__title {
-  color: #2c2c2c;
-  font-size: 40px;
-  margin: $desktop-grid-gap 0;
+  font-size: 26px;
+  font-weight: bold;
+  color: $text-color;
+  margin: $mobile-grid-gap 0;
 }
 
 .team-card__description {
   font-size: 16px;
-  color: $light-text-color;
-}
-
-@media screen and (max-width: 762px) {
-  .team-card__title {
-    margin: $mobile-grid-gap 0;
-  }
+  color: $blog-text-color;
+  line-height: 26px;
 }
 </style>

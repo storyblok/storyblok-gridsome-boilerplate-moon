@@ -28,7 +28,7 @@ export default {
 
 .team__title {
   font-size: 45px;
-  font-weight: 600;
+  font-weight: bold;
   margin-bottom: $desktop-grid-gap;
 }
 
