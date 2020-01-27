@@ -1,17 +1,17 @@
 <template>
-  <section class="principal-article">
-    <div class="principal-article__left">
-      <p class="principal-article__published">
+  <section class="principal-blog-post">
+    <div class="principal-blog-post__left">
+      <p class="principal-blog-post__published">
         {{ articlePublished }}
       </p>
 
-      <h2 class="principal-article__title">
+      <h2 class="principal-blog-post__title">
         {{ blok.title }}
       </h2>
 
-      <hr class="principal-article__divisor divisor" />
+      <hr class="principal-blog-post__divisor divisor" />
 
-      <h3 class="principal-article__description">
+      <h3 class="principal-blog-post__description">
         {{ blok.description }}
       </h3>
       
@@ -21,7 +21,7 @@
     </div>
 
     <div
-      class="principal-article__right"
+      class="principal-blog-post__right"
       :style="principalBlogPostStyle"
     />
   </section>
@@ -31,7 +31,7 @@
 import { getPublishedFormatDate } from '../utils/article'
 
 export default {
-  name: 'PrincipalArticle',
+  name: 'PrincipalBlogPost',
   props: ['blok'],
   computed: {
     articlePublished () {
@@ -47,13 +47,13 @@ export default {
 </script>
 
 <style lang="scss">
-.principal-article {
+.principal-blog-post {
   width: 100%;
   height: 100vh;
   display: flex;
 }
 
-.principal-article__left {
+.principal-blog-post__left {
   width: 50%;
   padding: $desktop-container-spacing;
   display: flex;
@@ -61,31 +61,31 @@ export default {
   justify-content: center;
 }
 
-.principal-article__right {
+.principal-blog-post__right {
   width: 50%;
   height: 100%;
   background-repeat: no-repeat;
   background-position: top right;
 }
 
-.principal-article__published {
+.principal-blog-post__published {
   margin-bottom: 10px;
   font-size: 16px;
   color: $light-text-color;
 }
 
-.principal-article__title {
+.principal-blog-post__title {
   font-size: 65px;
   line-height: 75px;
   font-weight: 600;
 }
 
-.principal-article__divisor.divisor {
+.principal-blog-post__divisor.divisor {
   margin-left: 0;
   margin-right: 0;
 }
 
-.principal-article__description {
+.principal-blog-post__description {
   font-size: 16px;
   color: $blog-text-color;
   line-height: 26px;
@@ -93,25 +93,25 @@ export default {
 }
 
 @media screen and (max-width: 762px) {
-  .principal-article {
+  .principal-blog-post {
     flex-direction: column;
     justify-content: flex-end;
     height: auto;
   }
 
-  .principal-article__left {
+  .principal-blog-post__left {
     width: 100%;
     padding: $mobile-container-spacing;
     order: 1;
   }
 
-  .principal-article__right {
+  .principal-blog-post__right {
     width: 100%;
     order: 0;
     min-height: 708px;
   }
 
-  .principal-article__title {
+  .principal-blog-post__title {
     font-size: 48px;
     font-weight: 600;
   }

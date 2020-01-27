@@ -11,9 +11,9 @@
       </li>
     </ul>
 
-    <ul class="footer-links footer-articles">
+    <ul class="footer-links footer-blog_posts">
       <li 
-        v-for="item in blok.articles" 
+        v-for="item in blok.blog_posts" 
         :key="item.id"> 
           <g-link :to="item.link.cached_url">
             {{item.name}}
@@ -73,7 +73,7 @@ export default {
     margin: 0 auto;
   }
 
-  .footer-articles {
+  .footer-blog_posts {
     text-align: center;
   }
 }

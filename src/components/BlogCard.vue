@@ -1,50 +1,50 @@
 <template>
-  <div>
-    <section v-for="(item, key) in blok.card" :key="key">
-      <div class="blog-cards" :class="{ 'blog-card--reverse': key === 1 }">
-        <div
-          class="blog-card__backgroud"
-          :style="{ 'backgroundColor': item.metadata_color }"
-        />
+  <div
+    class="blog-cards"
+    :class="{ 'blog-card--reverse': reverse }"
+  >
+    <div
+      class="blog-card__backgroud"
+      :style="{ 'backgroundColor': item.metadata_color }"
+    />
 
-        <div
-          class="blog-card__image"
-          :class="{ 'blog-card__image--reverse': key === 1 }"
-        >
-          <img :src="item.image" alt="" />
+    <div
+      class="blog-card__image"
+      :class="{ 'blog-card__image--reverse': reverse }"
+    >
+      <img :src="item.image" alt="" />
 
-          <g-link :to="item.link.cached_url">
-            <img class="only-desktop" src="/more-icon.svg" alt="" />
-          </g-link>
-        </div>
+      <g-link :to="item.link.cached_url">
+        <img class="only-desktop" src="/more-icon.svg" alt="" />
+      </g-link>
+    </div>
 
-        <div class="blog-card__text-container">
-          <p class="blog-card__text-container__title">
-            {{item.title}}
-          </p>
-          <p class="blog-card__text-container__description">
-            {{item.description}}
-          </p>
-          <p class="blog-card__text-container__date">
-            Space {{articlePublished}}
-          </p>
+    <div class="blog-card__text-container">
+      <p class="blog-card__text-container__title">
+        {{item.title}}
+      </p>
+      <p class="blog-card__text-container__description">
+        {{item.description}}
+      </p>
+      <p class="blog-card__text-container__date">
+        Space {{articlePublished}}
+      </p>
 
-          <g-link :to="item.link.cached_url" class="only-mobile link button is-primary">
-            Read the article
-          </g-link>
-        </div>
-      </div>
-    </section>
+      <g-link :to="item.link.cached_url" class="only-mobile link button is-primary">
+        Read the article
+      </g-link>
+    </div>
   </div>
 </template>
+
 <script>
 import { getPublishedFormatDate } from '../utils/article'
 export default {
   name: 'BlogCard',
-  props: ['blok'],
+  props: ['item', 'reverse'],
   computed: {
     articlePublished () {
-      return getPublishedFormatDate(this.blok)
+      return getPublishedFormatDate(this.item)
     }
   }
 }

@@ -9,20 +9,17 @@ import TeamCard from './TeamCard.vue'
 import Copyright from './Copyright.vue'
 import Navigation from './Navigation.vue'
 import MetricCard from './MetricCard.vue'
-import ArticleCard from './ArticleCard.vue'
+import BlogPostList from './BlogPostList.vue'
+import BlogSectionCard from './BlogSectionCard.vue'
 import CallToAbout from './CallToAbout.vue'
 import AboutContent from './AboutContent.vue'
-import PrincipalCard from './PrincipalCard.vue'
-import ArticlesSection from './ArticlesSection.vue'
-import PrincipalArticle from './PrincipalArticle.vue'
+import BlogPostSection from './BlogPostSection.vue'
+import PrincipalBlogPost from './PrincipalBlogPost.vue'
 import ContactSection from './ContactSection.vue'
 import ContactInformation from './ContactInformation.vue'
 import BlogPostContent from './BlogPostContent.vue'
-// import Container from './Container.vue'
 import BlogPost from './BlogPost.vue'
 import BlogPostHeader from './BlogPostHeader.vue'
-// import BlogSection from './BlogSection.vue'
-import Blog from './Blog.vue'
 import BlogCard from './BlogCard.vue'
 
 export default {
@@ -37,20 +34,16 @@ export default {
   Copyright,
   Navigation,
   MetricCard,
-  ArticleCard,
+  BlogPostList,
   CallToAbout,
-  ArticleCard,
   AboutContent,
-  PrincipalCard,
-  ArticlesSection,
-  PrincipalArticle,
+  BlogPostSection,
+  PrincipalBlogPost,
+  BlogSectionCard,
   ContactInformation,
   ContactSection,
   BlogPostContent,
-  // Container,
   BlogPost,
   BlogPostHeader,
-  // BlogSection,
-  Blog,
   BlogCard
 }

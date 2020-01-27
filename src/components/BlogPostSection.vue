@@ -1,9 +1,9 @@
 <template>
-  <section class="articles-section">
-    <h2 class="articles-section__title"> {{ blok.title }} </h2>
+  <section class="blog-post-section">
+    <h2 class="blog-post-section__title"> {{ blok.title }} </h2>
 
-    <div class="article-section__grid">
-      <ArticleCard
+    <div class="blog-post-section__grid">
+      <BlogSectionCard
         v-for="(item, key) in blok.list_article_cards"
         :blok="item"
         :key="key"
@@ -14,17 +14,17 @@
 
 <script>
 export default {
-  name: 'ArticlesSection',
+  name: 'BlogPostSection',
   props: ['blok']
 }
 </script>
 
 <style lang="scss">
-.articles-section {
+.blog-post-section {
   padding: $desktop-container-spacing;
 }
 
-.articles-section__title {
+.blog-post-section__title {
   font-size: 45px;
   font-weight: bold;
   line-height: 75px;
@@ -32,18 +32,18 @@ export default {
   margin-bottom: $desktop-grid-gap;
 }
 
-.article-section__grid {
+.blog-post-section__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: $desktop-grid-gap;
 }
 
 @media screen and (max-width: 762px) {
-  .articles-section {
+  .blog-post-section {
     padding: $mobile-container-spacing;
   }
 
-  .article-section__grid {
+  .blog-post-section__grid {
     display: grid;
     grid-template-columns: 1fr;
   }
