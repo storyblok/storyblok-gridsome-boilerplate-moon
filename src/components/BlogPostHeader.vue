@@ -86,6 +86,7 @@ export default {
 @media (max-width: $mobile) {
   .blog-post-header {
     display: block;
+    min-height: auto;
   }
 
   .blog-post-header__image {
