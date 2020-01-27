@@ -10,7 +10,11 @@ export default {
   props: ['blok'],
   computed: {
     content () {
-      return this.$storyapi.richTextResolver.render(this.blok)
+      if (this.blok.length) {
+        return this.$storyapi.richTextResolver.render(this.blok)
+      }
+      
+      return ''
     }
   }
 }
@@ -19,9 +23,12 @@ export default {
 <style lang="scss">
 .blog-post-content {
   width: 100%;
-  max-width: 1200px;
+  max-width: 720px;
   margin: 0 auto;
   padding: $desktop-container-spacing;
+  font-size: 16px;
+  color: $blog-text-color;
+  line-height: 26px;
 }
 
 .blog-post-content p {

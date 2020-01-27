@@ -12,7 +12,7 @@ export default {
 </script>
 <style lang="scss">
 .contact-information {
-  padding: $desktop-container-spacing;
+  padding: $desktop-container-spacing $desktop-container-spacing + $desktop-grid-gap;
 }
 
 .contact-information_title {

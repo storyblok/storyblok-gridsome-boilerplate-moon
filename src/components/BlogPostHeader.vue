@@ -1,7 +1,8 @@
 <template>
-  <div class="blog-post-header">
-    <img class="blog-post-header__image" :src="headerData.image.url" alt="">
-    
+  <div
+    class="blog-post-header"
+    :style="blogPostHeaderStyle"
+  >
     <div class="blog-post-header__text">
       <h1 class="blog-post-header__text__title">
         {{ headerData.title }}
@@ -29,6 +30,11 @@ export default {
   computed: {
     headerData () {
       return this.blok[0] || {}
+    },
+    blogPostHeaderStyle () {
+      return {
+        'background-image': `url(https:${this.headerData.image.url})`
+      }
     }
   }
 }
@@ -38,10 +44,13 @@ export default {
 .blog-post-header {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 708px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-origin: top;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .blog-post-header__image {
@@ -75,7 +84,7 @@ export default {
 .blog-post-header .arrow-down-icon {
   position: absolute;
   left: 50%;
-  bottom: -20px;
+  bottom: -34px;
   transform: translateX(-50%);
 }
 
@@ -85,7 +94,8 @@ export default {
 
 @media (max-width: $mobile) {
   .blog-post-header {
-    display: block;
+    /* display: block; */
+    background-size: cover;
   }
 
   .blog-post-header__image {
@@ -94,7 +104,7 @@ export default {
   }
 
   .blog-post-header__text {
-    color: $primary-color;
+    /* color: $primary-color; */
     padding: $desktop-grid-gap $mobile-container-spacing;
   }
 
@@ -103,11 +113,11 @@ export default {
   }
 
   .blog-post-header__text__divisor {
-    background-color: $primary-color;
+    /* background-color: $primary-color; */
   }
 
   .blog-post-header .arrow-down-icon {
-    display: none;
+    /* display: none; */
   }
 }
 

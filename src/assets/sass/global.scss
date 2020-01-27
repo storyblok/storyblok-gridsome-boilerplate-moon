@@ -48,6 +48,16 @@ a {
   color: invert($primary-color);
 }
 
+// hr divisor
+.divisor {
+  display: block;
+  max-width: 150px;
+  margin: $desktop-grid-gap auto;
+  border: none;
+  height: 3px;
+  background-color: $text-color;
+}
+
 @media screen and (max-width: $mobile) {
   .only-desktop {
     display: none;

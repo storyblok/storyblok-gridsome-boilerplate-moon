@@ -1,7 +1,7 @@
 <template>
   <div class="blog">
     <h1 class="blog__title">{{blok.title}}</h1>
-    <div class="divisor" />
+    <hr class="divisor" />
   </div>
 </template>
 <script>
@@ -14,15 +14,15 @@ export default {
 .blog__title {
   text-align: center;
   font-size: 65px;
-  font-weight: 800;
+  font-weight: 600;
   color: #000000;
 }
 
 .divisor {
-  margin: $mobile-grid-gap * 2 auto;
+  margin: $desktop-grid-gap auto;
   width: 150px;
   height: 2px;
-  background-color: $primary-color;
+  background-color: $text-color;
 }
 
 @media screen and (max-width: $mobile) {

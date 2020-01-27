@@ -6,7 +6,8 @@
       <h1 class="contact-us-left__title">
         {{ blok.title }}
       </h1>
-      <div class="contact-us-left__divisor" />
+
+      <hr class="divisor" />
 
       <div class="contact-us-left-container">
         <CInput
@@ -70,16 +71,13 @@ export default {
   background-color: #ededed;
 }
 
-.contact-us-left__title {
-  font-size: 70px;
-  font-weight: 600;
+.contact-us-right img {
+  max-width: 10%;
 }
 
-.contact-us-left__divisor {
-  margin: $desktop-grid-gap 0;
-  width: 142px;
-  height: 3px;
-  background-color: $primary-color;
+.contact-us-left__title {
+  font-size: 65px;
+  font-weight: 600;
 }
 
 .contact-us-left-container {
@@ -92,6 +90,11 @@ export default {
 
 .contact-us-left-container .button {
   margin: 0 0 0 auto;
+}
+
+.contact-us-left .divisor {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 @media (max-width: 762px) {
@@ -124,8 +127,9 @@ export default {
     width: 100%;
   }
 
-  .contact-us-left__divisor {
-    margin: $mobile-grid-gap * 3 auto;
+  .contact-us-left .divisor {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .contact-us-left-container .field {

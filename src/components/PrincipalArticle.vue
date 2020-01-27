@@ -4,11 +4,12 @@
       <p class="principal-article__published">
         {{ articlePublished }}
       </p>
+
       <h2 class="principal-article__title">
         {{ blok.title }}
       </h2>
 
-      <div class="principal-article__divisor" />
+      <hr class="principal-article__divisor divisor" />
 
       <h3 class="principal-article__description">
         {{ blok.description }}
@@ -79,11 +80,9 @@ export default {
   font-weight: 600;
 }
 
-.principal-article__divisor {
-  margin: $desktop-grid-gap 0;
-  width: 142px;
-  height: 2px;
-  background-color: $primary-color;
+.principal-article__divisor.divisor {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .principal-article__description {

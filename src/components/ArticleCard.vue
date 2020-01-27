@@ -2,7 +2,8 @@
   <div class="article-card">
     <figure class="article-card__image">
       <img :src="blok.image" alt="">
-    </figure> 
+    </figure>
+
     <g-link
       :to="blok.link.cached_url"
       :title="`Check out the post ${blok.title}`"
@@ -22,7 +23,7 @@
 
     <g-link
       class="link only-desktop"
-      :to="blok.link"
+      :to="blok.link.cached_url"
       :title="`Check out the post ${blok.title}`"
     >
       <img src="/more-icon.svg" alt="" />
@@ -30,7 +31,7 @@
 
     <g-link
       class="link only-mobile button is-primary"
-      :to="blok.link"
+      :to="blok.link.cached_url"
       :title="`Check out the post ${blok.title}`"
     >
       Read the article

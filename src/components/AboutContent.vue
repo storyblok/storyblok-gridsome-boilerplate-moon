@@ -3,7 +3,7 @@
     <div class="about-content__headlines">
       <h2 class="about-content__title"> {{ blok.headline }} </h2>
 
-      <hr class="about-content__divisor" />
+      <hr class="divisor" />
 
       <h3 class="about-content__subtitle"> {{ blok.subtitle }} </h3>
     </div>    
@@ -46,13 +46,6 @@ export default {
   font-size: 65px;
   font-weight: 600;
   text-align: center;
-}
-
-.about-content__divisor {
-  max-width: 150px;
-  height: 2px;
-  margin: $desktop-grid-gap auto;
-  background-color: #2c2c2c;
 }
 
 .about-content__subtitle {
