@@ -52,6 +52,10 @@ export default {
   margin: 0 $desktop-grid-gap; 
 }
 
+.footer-links li:not(:last-of-type) {
+  margin-bottom: 7px;
+}
+
 .footer-links li:hover {
   color: $secondary-color;
 }

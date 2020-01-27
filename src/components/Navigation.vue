@@ -59,6 +59,9 @@ export default {
 .navigation .link:hover,
 .link.active--exact {
   color: $secondary-color;
+}
+
+.link.active--exact {
   font-weight: bold;
 }
 

@@ -2,7 +2,18 @@
   <div class="call-to-about">
     <div class="call-to-about-mask"></div>
     
-    <img class="call-to-about-image" :src="blok.image" alt="">
+    <div
+      class="call-to-about-image"
+      :style="callToAboutImageStyle"
+    >
+      <g-link
+        class="link only-desktop"
+        to="/about"
+        title="Go to About Us page"
+      >
+        <img src="/more-icon.svg" alt="" />
+      </g-link>
+    </div>
 
     <div class="call-to-about-section">
       <h2 class="call-to-about-section_title">{{blok.title}}</h2>
@@ -10,7 +21,7 @@
       <p class="call-to-about-section_description">{{blok.description}}</p>
 
       <g-link
-        class="link button is-primary"
+        class="link button is-primary only-mobile"
         to="/about"
       >
         Check out!
@@ -27,6 +38,13 @@ export default {
   props: ['blok'],
   components: {
     Link
+  },
+  computed: {
+    callToAboutImageStyle () {
+      return {
+        'background-image': `url(https:${this.blok.image})`
+      }
+    }
   }
 }
 </script>
@@ -55,8 +73,20 @@ export default {
   height: 356px;
   float: left;
   position: relative;
-  margin-left: -150px;
+  margin-left: -278px;
   margin-top: 100px;
+}
+
+.call-to-about-image .link {
+  position: absolute;
+  right: -34px;
+  bottom: 15%;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.call-to-about:hover .call-to-about-image .link {
+  opacity: 1;
 }
 
 .call-to-about-section {

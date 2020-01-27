@@ -19,7 +19,10 @@
       </g-link>
     </div>
 
-    <img :src="blok.image" class="principal-article__right" />
+    <div
+      class="principal-article__right"
+      :style="principalBlogPostStyle"
+    />
   </section>
 </template>
 
@@ -32,6 +35,11 @@ export default {
   computed: {
     articlePublished () {
       return getPublishedFormatDate(this.blok)
+    },
+    principalBlogPostStyle () {
+      return {
+        'background-image': `url('https:${this.blok.image}')`
+      }
     }
   }
 }
@@ -55,6 +63,8 @@ export default {
 .principal-article__right {
   width: 50%;
   height: 100%;
+  background-repeat: no-repeat;
+  background-position: top right;
 }
 
 .principal-article__published {
@@ -64,7 +74,8 @@ export default {
 }
 
 .principal-article__title {
-  font-size: 70px;
+  font-size: 65px;
+  line-height: 75px;
   font-weight: 600;
 }
 
@@ -78,7 +89,7 @@ export default {
 .principal-article__description {
   font-size: 16px;
   color: $blog-text-color;
-  line-height: 1.63;
+  line-height: 26px;
   margin-bottom: $desktop-grid-gap;
 }
 
@@ -98,6 +109,7 @@ export default {
   .principal-article__right {
     width: 100%;
     order: 0;
+    min-height: 708px;
   }
 
   .principal-article__title {

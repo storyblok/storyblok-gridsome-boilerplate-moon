@@ -4,9 +4,14 @@
       <img :src="blok.image.url" alt="">
     </figure>
 
-    <h3 class="article-card__title">
-      {{ blok.title }}
-    </h3>
+    <g-link
+      :to="blok.link"
+      :title="`Check out the post ${blok.title}`"
+    >
+      <h3 class="article-card__title">
+        {{ blok.title }}
+      </h3>
+    </g-link>
 
     <p class="article-card__description">
       {{ blok.description }}
@@ -57,7 +62,6 @@ $svg-width: 60px;
 
 .article-card__image {
   width: 100%;
-  min-height: 260px;
   overflow: hidden;
 }
 
@@ -72,12 +76,15 @@ $svg-width: 60px;
 }
 
 .article-card__title {
-  font-size: 40px;
+  font-size: 26px;
+  font-weight: bold;
+  color: $text-color;
   margin: $desktop-grid-gap 0;
 }
 
 .article-card__description {
   font-size: 16px;
+  line-height: 26px;
   color: $blog-text-color;
   margin-bottom: $desktop-grid-gap;
 }

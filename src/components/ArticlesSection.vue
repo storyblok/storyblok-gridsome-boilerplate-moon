@@ -25,7 +25,9 @@ export default {
 }
 
 .articles-section__title {
-  font-size: 40px;
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 75px;
   color: $primary-color;
   margin-bottom: $desktop-grid-gap;
 }
