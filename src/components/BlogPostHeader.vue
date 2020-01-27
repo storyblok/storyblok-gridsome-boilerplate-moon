@@ -103,7 +103,6 @@ export default {
   }
 
   .blog-post-header__text {
-    /* color: $primary-color; */
     padding: $desktop-grid-gap $mobile-container-spacing;
   }
 
@@ -111,12 +110,4 @@ export default {
     font-size: 35px;
   }
 }
-
-@media (max-width: 1100px) {
-  .blog-post-header__text__title {
-    top: 35%;
-    font-size: 50px;
-  }
-} 
-
 </style>

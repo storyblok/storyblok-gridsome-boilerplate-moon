@@ -10,7 +10,7 @@ export default {
   props: ['blok'],
   computed: {
     content () {
-      if (this.blok.length) {
+      if (this.blok) {
         return this.$storyapi.richTextResolver.render(this.blok)
       }
       
