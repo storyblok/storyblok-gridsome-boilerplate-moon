@@ -1,7 +1,6 @@
 <template>
   <div class="blog-post-header">
     <img class="blog-post-header__image" :src="headerData.image.url" alt="">
-    <img class="blog-post-header__image" :src="headerData.image.url" alt="">
     
     <div class="blog-post-header__text">
       <h1 class="blog-post-header__text__title">
@@ -49,15 +48,7 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50%;
-  background-color: $backgroud-blog-image-color;
-  filter: brightness(60%);
-}
-
-.blog-post-header__image:first-child {
-  transform: scaleX(-1);
-  top: 0;
-  left: 0;
+  width: 100%;
 }
 
 .blog-post-header__text {
@@ -95,10 +86,6 @@ export default {
 @media (max-width: $mobile) {
   .blog-post-header {
     display: block;
-  }
-
-  .blog-post-header__image:first-of-type {
-    display: none; 
   }
 
   .blog-post-header__image {

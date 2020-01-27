@@ -11,9 +11,9 @@
           class="blog-card__image"
           :class="{ 'blog-card__image--reverse': key === 1 }"
         >
-          <img :src="item.image.url" alt="" />
+          <img :src="item.image" alt="" />
 
-          <g-link to="/blog">
+          <g-link :to="item.link.cached_url">
             <img class="only-desktop" src="/more-icon.svg" alt="" />
           </g-link>
         </div>
@@ -29,7 +29,7 @@
             Space {{articlePublished}}
           </p>
 
-          <g-link to="/blog" class="only-mobile link button is-primary">
+          <g-link :to="item.link.cached_url" class="only-mobile link button is-primary">
             Read the article
           </g-link>
         </div>
