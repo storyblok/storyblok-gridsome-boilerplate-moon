@@ -1,11 +1,10 @@
 <template>
   <div class="article-card">
     <figure class="article-card__image">
-      <img :src="blok.image.url" alt="">
-    </figure>
-
+      <img :src="blok.image" alt="">
+    </figure> 
     <g-link
-      :to="blok.link"
+      :to="blok.link.cached_url"
       :title="`Check out the post ${blok.title}`"
     >
       <h3 class="article-card__title">
