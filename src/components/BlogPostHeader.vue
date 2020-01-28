@@ -92,7 +92,13 @@ export default {
   margin-top: 10px;
 }
 
-@media (max-width: $mobile) {
+@media screen and (min-width: 1440px) {
+  .blog-post-header {
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: $mobile) {
   .blog-post-header {
     background-size: cover;
   }
