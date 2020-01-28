@@ -77,9 +77,10 @@ $svg-width: 60px;
 
 .article-card__title {
   font-size: 26px;
-  font-weight: bold;
+  font-weight: 800;
   color: $text-color;
   margin: $desktop-grid-gap 0;
+  max-width: 300px;
 }
 
 .article-card__description {
@@ -87,6 +88,7 @@ $svg-width: 60px;
   line-height: 26px;
   color: $blog-text-color;
   margin-bottom: $desktop-grid-gap;
+  min-height: 100px;
 }
 
 .article-card__published {
