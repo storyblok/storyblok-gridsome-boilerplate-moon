@@ -1,4 +1,4 @@
-const path = require('path')
+const { resolve } = require('path')
 
 // use it to load the variables into all vue files
 function addStyleResource (rule) {
@@ -6,7 +6,7 @@ function addStyleResource (rule) {
     .loader('style-resources-loader')
     .options({
       patterns: [
-        path.resolve(__dirname, './src/assets/sass/variables.scss')
+        resolve(__dirname, './src/assets/sass/variables.scss')
       ]
     })
 }
@@ -18,7 +18,7 @@ module.exports = {
       use: 'gridsome-source-storyblok',
       options: {
         client: {
-          accessToken: process.env.SPACE_TOKEN
+          accessToken: process.env.GRIDSOME_SPACE_TOKEN
         },
         downloadImages: true,
         imageDirectory: 'assets/images'

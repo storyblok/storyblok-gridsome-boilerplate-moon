@@ -1,5 +1,5 @@
 <template>
-  <section class="contact-us">
+  <section class="contact-us" v-editable="blok">
     <img :src="blok.image.url" :alt="'Image of the' + blok.title" class="contact-us-right" />
     <div class="contact-us-left">
       <h1 class="contact-us-left__title">

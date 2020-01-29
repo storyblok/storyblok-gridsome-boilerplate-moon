@@ -1,5 +1,5 @@
 <template>
-  <section class="about-content">
+  <section class="about-content" v-editable="blok">
     <div class="about-content__headlines">
       <h2 class="about-content__title"> {{ blok.headline }} </h2>
 

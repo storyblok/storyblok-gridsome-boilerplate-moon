@@ -1,5 +1,5 @@
 <template>
-  <section class="blog-post-section">
+  <section class="blog-post-section" v-editable="blok">
     <h2 class="blog-post-section__title"> {{ blok.title }} </h2>
 
     <div class="blog-post-section__grid">

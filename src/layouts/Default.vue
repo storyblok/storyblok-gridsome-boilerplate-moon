@@ -22,6 +22,10 @@ export default {
   },
   methods: {
     getProperty (prop) {
+      if (this.globalContent[prop] === undefined) {
+        return {}
+      }
+
       return this.globalContent[prop][0] || {}
     }
   }

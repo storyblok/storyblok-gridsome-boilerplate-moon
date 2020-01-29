@@ -1,5 +1,5 @@
 <template>
-  <article class="blog-post-content">
+  <article class="blog-post-content" v-editable="blok">
     <div v-html="content"></div>
   </article>
 </template>

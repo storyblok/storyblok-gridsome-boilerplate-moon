@@ -1,5 +1,5 @@
 <template>
-  <section class="blog-post">
+  <section class="blog-post" v-editable="blok">
     <BlogPostHeader :blok="blok.header" />
 
     <BlogPostContent :blok="blok.content" />

@@ -1,5 +1,5 @@
 <template>
-  <div class="metrics">
+  <div class="metrics" v-editable="blok">
     <div
       class="metric__column"
       v-for="item in blok.columns"

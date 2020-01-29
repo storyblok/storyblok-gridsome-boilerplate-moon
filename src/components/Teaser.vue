@@ -1,7 +1,7 @@
 <template>
-  <header class="teaser">
-    <CImage :image="blok.logo" />
-    <Navigation :items="blok.navigation" />
+  <header class="teaser" v-editable="blok">
+    <CImage :image="blok.logo || {}" />
+    <Navigation :items="blok.navigation || []" />
   </header>
 </template>
 

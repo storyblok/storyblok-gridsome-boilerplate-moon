@@ -1,5 +1,5 @@
 <template>
-  <section class="principal-blog-post">
+  <section class="principal-blog-post" v-editable="blok">
     <div class="principal-blog-post__left">
       <p class="principal-blog-post__published">
         {{ articlePublished }}

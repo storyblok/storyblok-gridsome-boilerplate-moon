@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-editable="blok">
     <div class="copyright">
       <a href="https://storyblok.com" title="Link to Storyblok site"> 
         <img class="copyright-image" :src="blok.logo.url" alt="Image of the logo">

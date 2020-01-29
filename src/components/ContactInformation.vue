@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-information">
+  <div class="contact-information" v-editable="blok">
     <p class="contact-information_title">{{blok.title}}</p>
     <p class="contact-information_description">{{blok.description}}</p>
   </div>

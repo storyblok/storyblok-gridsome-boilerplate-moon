@@ -1,5 +1,5 @@
 <template>
-  <nav class="navigation">
+  <nav class="navigation" v-editable="items">
     <ul>
       <li
         v-for="(item, key) in items"

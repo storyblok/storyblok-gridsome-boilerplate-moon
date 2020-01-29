@@ -2,6 +2,7 @@
   <div
     class="blog-post-header"
     :style="blogPostHeaderStyle"
+    v-editable="blok"
   >
     <div class="blog-post-header__text">
       <h1 class="blog-post-header__text__title">

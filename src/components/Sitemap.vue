@@ -1,9 +1,9 @@
 <template>
-  <footer class="footer">
-    <CImage :image="blok.logo" />
+  <footer class="footer" v-editable="blok">
+    <CImage :image="blokReturn.logo || ''" />
     <ul class="footer-links">
       <li 
-        v-for="item in blok.map" 
+        v-for="item in blokReturn.map" 
         :key="item.id"> 
           <g-link :to="item.link.cached_url" :title="'Link to the page ' + item.name">
             {{item.name}}
@@ -13,7 +13,7 @@
 
     <ul class="footer-links footer-blog_posts">
       <li 
-        v-for="item in blok.blog_posts" 
+        v-for="item in blokReturn.blog_posts" 
         :key="item.id"> 
           <g-link :to="item.link.cached_url" :title="'Link to the post ' + item.name">
             {{item.name}}
@@ -23,7 +23,7 @@
     
     <g-link 
       class="button is-primary" 
-      :to="blok.contact_link.cached_url" 
+      :to="link" 
       title="Link to the Contact Us page"
     >
       Contact Us
@@ -34,7 +34,24 @@
 <script>
 export default {
   name: 'Footer',
-  props: ['blok']
+  props: ['blok'],
+  computed: {
+    link() {
+      if (this.blok) {
+        if (this.blok.contact_link){
+          return this.blok.contact_link.cached_url
+        } else {
+          return ''
+        }
+      }
+    },
+    blokReturn() {
+      if (this.blok) {
+        return this.blok
+      }
+      return {}
+    }
+  }
 }
 </script>
 

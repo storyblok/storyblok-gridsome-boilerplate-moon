@@ -13,7 +13,10 @@ export default {
       if (typeof this.image === 'string') {
         return this.image
       }
-      const path = this.image.path
+      const path = this.image.path || ''
+      if (path === '' || path === undefined) {
+        return ''
+      }
       return require('!!assets-loader?width=800&quality=100&fit=inside!~/' + path)
     }
   }

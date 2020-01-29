@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" v-editable="blok">
     {{ blok }}
   </header>
 </template>

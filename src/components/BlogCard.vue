@@ -2,6 +2,7 @@
   <div
     class="blog-cards"
     :class="{ 'blog-card--reverse': reverse }"
+    v-editable="item"
   >
     <div
       class="blog-card__backgroud"

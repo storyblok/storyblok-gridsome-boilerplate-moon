@@ -1,5 +1,5 @@
 <template>
-  <div class="article-card">
+  <div class="article-card" v-editable="blok">
     <figure class="article-card__image">
       <img :src="blok.image" :alt="'Image of the' + blok.title">
     </figure>

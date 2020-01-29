@@ -1,5 +1,5 @@
 <template>
-  <div class="call-to-about">
+  <div class="call-to-about" v-editable="blok">
     <div class="call-to-about-mask"></div>
     
     <div

@@ -1,5 +1,5 @@
 <template>
-  <div class="team-card">
+  <div class="team-card" v-editable="blok">
     <img 
       :src="blok.image.url" 
       :alt="'Image of the astronaut ' + blok.name" 
