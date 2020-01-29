@@ -99,6 +99,24 @@ export default {
   }
 }
 
+@media screen and (min-width: 1000px) {
+  .blog-post-header {
+    min-height: 530px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .blog-post-header {
+    min-height: 455px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .blog-post-header {
+    min-height: 395px;
+  }
+}
+
 @media screen and (max-width: $mobile) {
   .blog-post-header {
     background-size: cover;
