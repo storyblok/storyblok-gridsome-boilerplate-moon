@@ -2,7 +2,7 @@
   <div v-editable="blok">
     <div class="copyright">
       <a href="https://storyblok.com" title="Link to Storyblok site"> 
-        <img class="copyright-image" :src="blok.logo.url" alt="Image of the logo">
+        <img class="copyright-image" :src="imageLink" alt="Image of the logo">
       </a>
     </div>
   </div>
@@ -11,7 +11,19 @@
 <script>
 export default {
   name: 'Copyright',
-  props: ['blok']
+  props: ['blok'],
+  computed: {
+    imageLink() {
+      if(this.blok) {
+        if (typeof(this.blok.logo) === 'object') {
+          return this.blok.logo.url
+        } else {
+          return this.blok.logo
+        }
+      }
+      return ''
+    }
+  }
 }
 </script>
 

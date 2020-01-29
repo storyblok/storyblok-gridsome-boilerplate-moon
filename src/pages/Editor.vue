@@ -20,11 +20,12 @@ const loadStoryblokBridge = function(cb) {
 }
 
 export default {
-  name: "Global",
+  name: "Editor",
   data() {
     return {
       story: {content: {}},
-      global: {content: {}}
+      global: {content: {}},
+      oldPath: ''
     }
   },
   mounted() {
@@ -32,8 +33,11 @@ export default {
   },
   methods: {
     loadStory() {
+      if (window.storyblok.getParam('path') !== '') {
+        this.oldPath = window.storyblok.getParam('path')
+      }
       window.storyblok.get({
-        slug: window.storyblok.getParam('path'),
+        slug: window.storyblok.getParam('path') || this.oldPath,
         version: 'draft'
       }, (data) => {
         this.story = data.story
