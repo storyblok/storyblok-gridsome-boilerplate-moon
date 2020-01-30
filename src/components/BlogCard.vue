@@ -45,7 +45,10 @@ export default {
   props: ['item', 'reverse'],
   computed: {
     articlePublished () {
-      return getPublishedFormatDate(this.item)
+      if (this.item) {
+        return getPublishedFormatDate(this.item)
+      }
+      return ''
     }
   }
 }

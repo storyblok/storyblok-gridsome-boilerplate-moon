@@ -47,7 +47,10 @@ export default {
   props: ['blok'],
   computed: {
     articlePublished () {
-      return getPublishedFormatDate(this.blok)
+      if (this.blok) {
+        return getPublishedFormatDate(this.blok)
+      }
+      return ''
     }
   }
 }
