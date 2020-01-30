@@ -99,11 +99,11 @@ export default {
   }
 }
 
-@media screen and (min-width: 1000px) {
-  .blog-post-header {
-    min-height: 530px;
-  }
-}
+// @media screen and (min-width: 1000px) {
+//   .blog-post-header {
+//     min-height: 530px;
+//   }
+// }
 
 @media screen and (max-width: 900px) {
   .blog-post-header {

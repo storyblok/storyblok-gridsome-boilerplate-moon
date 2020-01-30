@@ -3,13 +3,26 @@
     <BlogPostHeader :blok="blok.header" />
 
     <BlogPostContent :blok="blok.content" />
+
+    <BlogCard :item="setItem" />
   </section>
 </template>
 
 <script>
 export default {
   name: 'BlogPost',
-  props: ['blok']
+  props: ['blok'],
+
+  computed: {
+    setItem () {
+      if (this.blok) {
+        if (this.blok.post) {
+          return this.blok.post[0].posts[0]
+        }
+      }
+      return ''
+    }
+  }
 }
 </script>
 
