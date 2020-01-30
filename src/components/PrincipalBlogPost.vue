@@ -18,7 +18,7 @@
         :to="blok.link.cached_url" 
         class="button is-primary" 
         :alt="'Link to the post: ' + blok.title">
-        Read Article
+        Read More
       </g-link>
     </div>
 
@@ -97,7 +97,7 @@ export default {
   margin-bottom: $desktop-grid-gap;
 }
 
-@media screen and (max-width: 762px) {
+@media screen and (max-width: $mobile) {
   .principal-blog-post {
     flex-direction: column;
     justify-content: flex-end;
@@ -119,6 +119,34 @@ export default {
   .principal-blog-post__title {
     font-size: 48px;
     font-weight: 600;
+    padding: inherit;
+  }
+
+  .principal-blog-post .principal-blog-post__right {
+    margin-top: 20px;
+    opacity: 30%;
+    min-height: 650px;
+  }
+
+  .principal-blog-post__left {
+    align-items: center;
+    position: absolute;
+    text-align: center;
+  }
+  
+  .principal-blog-post__title,
+  .principal-blog-post__published,
+  .principal-blog-post__divisor.divisor,
+  .principal-blog-post__description {
+    filter: brightness(0.1);
+  }
+
+  .principal-blog-post__title { 
+    font-weight: bold;
+  }
+
+  .principal-blog-post__divisor.divisor {
+    align-items: baseline;
   }
 }
 </style>

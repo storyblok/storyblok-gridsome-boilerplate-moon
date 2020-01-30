@@ -86,13 +86,13 @@ export default {
   margin-left: $desktop-container-spacing;
 }
 
-@media (max-width: 762px) {
+@media screen and (max-width: $mobile) {
   .footer {
     flex-direction: column;
     padding: $mobile-container-spacing;
   }
 
-  .footer-links {
+  .footer .footer-links {
     padding: $mobile-grid-gap * 2 0;
     margin-left: 0;
     margin-right: 0;
@@ -101,6 +101,10 @@ export default {
 
   .footer-blog_posts {
     text-align: center;
+  }
+
+  .footer-button {
+    margin: 0;
   }
 }
 </style>

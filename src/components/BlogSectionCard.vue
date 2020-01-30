@@ -30,7 +30,7 @@
     </g-link>
 
     <g-link
-      class="link only-mobile button is-primary"
+      class="link only-mobile button is-primary card-link"
       :to="blok.link.cached_url"
       :title="`Check out the post ${blok.title}`"
     >
@@ -124,10 +124,20 @@ $svg-width: 60px;
   .article-card__title {
     font-size: 28px;
     margin: $mobile-grid-gap 0;
+    max-width: none;
   }
 
   .article-card__description {
     margin-bottom: $mobile-grid-gap;
+    padding: 0 $mobile-container-spacing * 2 0 $mobile-container-spacing * 2;
+  }
+
+  .card-link {
+    margin: 0 auto;
+  }
+  
+  .card-link:last-child {
+    margin-bottom: $mobile-grid-gap; 
   }
 }
 </style>

@@ -40,7 +40,8 @@ export default {
 
 @media screen and (max-width: 762px) {
   .blog-post-section {
-    padding: $mobile-container-spacing;
+    padding: 0;
+    text-align: center;
   }
 
   .blog-post-section__grid {
