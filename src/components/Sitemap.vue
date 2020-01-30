@@ -22,7 +22,7 @@
     </ul>
     
     <g-link 
-      class="button is-primary" 
+      class="button is-primary footer-button" 
       :to="link" 
       title="Link to the Contact Us page"
     >
@@ -71,6 +71,7 @@ export default {
 
 .footer .footer-links {
   margin: 0 $desktop-grid-gap; 
+  margin-left: $desktop-container-spacing * 2;
 }
 
 .footer-links li:not(:last-of-type) {
@@ -79,6 +80,10 @@ export default {
 
 .footer-links li:hover {
   color: $secondary-color;
+}
+
+.footer-button {
+  margin-left: $desktop-container-spacing;
 }
 
 @media (max-width: 762px) {

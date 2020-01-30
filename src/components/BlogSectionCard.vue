@@ -1,7 +1,7 @@
 <template>
   <div class="article-card" v-editable="blok">
     <figure class="article-card__image">
-      <img :src="blok.image" :alt="'Image of the' + blok.title">
+      <img :src="blok.image" :alt="'Image of the' + blok.title" :title="`Check out the post ${blok.title}`">
     </figure>
 
     <g-link
@@ -80,7 +80,7 @@ $svg-width: 60px;
 
 .article-card__title {
   font-size: 26px;
-  font-weight: 800;
+  font-weight: bold;
   color: $text-color;
   margin: $desktop-grid-gap 0;
   max-width: 300px;

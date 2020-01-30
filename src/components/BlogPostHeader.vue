@@ -105,15 +105,24 @@ export default {
 //   }
 // }
 
+@media screen and (max-width: 1200px) {
+  .blog-post-header {
+    min-height: 455px;
+    background-size: cover;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .blog-post-header {
     min-height: 455px;
+    background-size: cover;
   }
 }
 
 @media screen and (max-width: 800px) {
   .blog-post-header {
     min-height: 395px;
+    background-size: cover;
   }
 }
 

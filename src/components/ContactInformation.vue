@@ -12,7 +12,7 @@ export default {
 </script>
 <style lang="scss">
 .contact-information {
-  padding: $desktop-container-spacing $desktop-container-spacing + $desktop-grid-gap;
+  padding: 0 $desktop-grid-gap;
 }
 
 .contact-information_title {
@@ -27,7 +27,13 @@ export default {
   margin-top: 30px;
 }
 
-@media (max-width: 762px) {
+@media screen and (min-width: 1440px) {
+  .contact-information {
+    padding: 0 $desktop-container-spacing * 2.3;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .contact-information {
     padding: $mobile-container-spacing;
   }
