@@ -15,7 +15,7 @@
     >
       <img :src="item.image" :alt="'Image of the ' + item.title" />
 
-      <g-link :to="item.link.cached_url">
+      <g-link :to="item.link.cached_url" :title="'Link to the article ' + item.title">
         <img class="only-desktop" src="/more-icon.svg" alt="" />
       </g-link>
     </div>
@@ -31,7 +31,11 @@
         Space {{articlePublished}}
       </p>
 
-      <g-link :to="item.link.cached_url" class="only-mobile link button is-primary">
+      <g-link 
+        :to="item.link.cached_url" 
+        class="only-mobile link button is-primary"
+        :title="'Link to the article ' + item.title"
+      >
         Read the article
       </g-link>
     </div>

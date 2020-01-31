@@ -17,7 +17,7 @@
       <g-link 
         :to="blok.link.cached_url" 
         class="button is-primary" 
-        :alt="'Link to the post: ' + blok.title">
+        :title="'Link to the post: ' + blok.title">
         Read More
       </g-link>
     </div>
@@ -147,6 +147,11 @@ export default {
 
   .principal-blog-post__divisor.divisor {
     align-items: baseline;
+  }
+
+  .principal-blog-post__left a {
+    z-index: 999;
+    background-color: transparent;
   }
 }
 </style>

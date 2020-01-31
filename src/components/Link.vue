@@ -1,5 +1,5 @@
 <template>
-  <g-link class="link" v-bind="$props">
+  <g-link class="link" v-bind="$props" :title="'Link to ' + title">
     <span>{{ name }}</span>
   </g-link>
 </template>

@@ -5,6 +5,7 @@
     </label>
 
     <input
+      :id="id"
       :value="value"
       @input="event => $emit('input', event.target.value)"
       v-bind="$attrs"
