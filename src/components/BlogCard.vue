@@ -150,7 +150,7 @@ export default {
 
   .blog-cards {
     display: block;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
   }
 
   .blog-card__text-container { 
@@ -177,7 +177,9 @@ export default {
   }
 
   .blog-cards .link.only-mobile {
-    margin-top: $mobile-grid-gap * 2;
+    // margin-top: $mobile-grid-gap * 2;
+    margin: $mobile-grid-gap auto;
+
   }
 }
 </style>

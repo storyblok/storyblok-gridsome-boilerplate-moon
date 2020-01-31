@@ -95,7 +95,8 @@ export default {
 
 @media screen and (max-width: 762px) {
   .about-content {
-    padding: $mobile-container-spacing;
+    // padding: $mobile-container-spacing;
+    padding: 0;
   }
 
   .about-content__grid {

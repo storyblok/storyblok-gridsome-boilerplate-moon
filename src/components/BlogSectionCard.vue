@@ -137,7 +137,7 @@ $svg-width: 60px;
   }
   
   .card-link:last-child {
-    margin-bottom: $mobile-grid-gap; 
+    margin-bottom: $mobile-container-spacing; 
   }
 }
 </style>

@@ -60,6 +60,9 @@ a {
 }
 
 @media screen and (max-width: $mobile) {
+  p, a, div, section {
+    text-align: center;
+  }
   .only-desktop {
     display: none;
   }

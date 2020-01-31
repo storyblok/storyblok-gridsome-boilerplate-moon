@@ -104,7 +104,7 @@ export default {
   }
 
   .footer-button {
-    margin: 0;
+    margin: $mobile-container-spacing 0;
   }
 }
 </style>
