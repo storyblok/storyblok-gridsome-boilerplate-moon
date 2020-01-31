@@ -51,7 +51,7 @@ export default {
   align-items: center;
   background-origin: top;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .blog-post-header__image {
@@ -98,12 +98,6 @@ export default {
     background-position: center;
   }
 }
-
-// @media screen and (min-width: 1000px) {
-//   .blog-post-header {
-//     min-height: 530px;
-//   }
-// }
 
 @media screen and (max-width: 1200px) {
   .blog-post-header {
