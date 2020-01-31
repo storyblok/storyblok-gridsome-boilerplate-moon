@@ -21,7 +21,7 @@
       <p class="call-to-about-section_description">{{blok.description}}</p>
 
       <g-link
-        class="link button is-primary only-mobile"
+        class="link button is-primary only-mobile about-button"
         to="/about"
         title="Go to About page"
       >
@@ -131,12 +131,19 @@ export default {
   .call-to-about-section {
     width: 100%;
     height: auto;
-    margin: $mobile-grid-gap;
+    margin: 0;
     padding: $mobile-container-spacing;
+    text-align: center;
   }
+
   .call-to-about-section_title { 
     margin-top: 0px;
   }
+
+  .about-button {
+    margin: 0 auto;
+  }
+
 } 
 
 </style>
