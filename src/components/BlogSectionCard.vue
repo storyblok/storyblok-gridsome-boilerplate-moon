@@ -83,7 +83,7 @@ $svg-width: 60px;
   font-weight: bold;
   color: $text-color;
   margin: $desktop-grid-gap 0;
-  max-width: 300px;
+  max-width: 290px;
 }
 
 .article-card__description {

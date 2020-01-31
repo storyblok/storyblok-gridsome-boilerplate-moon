@@ -154,7 +154,7 @@ export default {
   }
 
   .blog-card__text-container { 
-    width: 100%;
+    width: 95%;
     height: auto;
     display: block;
   }
@@ -164,6 +164,7 @@ export default {
     width: 100%;
     height: 356px;
     margin: 20px auto;
+    max-width: 95%;
   }
 
   .blog-card__text-container {

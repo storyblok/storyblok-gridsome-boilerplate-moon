@@ -25,6 +25,6 @@ export default {
 
 <style>
 .c-image img {
-  max-width: 100%;
+  max-width: 95%;
 }
 </style>

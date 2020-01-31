@@ -40,7 +40,7 @@ export default {
 
 @media screen and (max-width: 762px) {
   .team {
-    padding: $mobile-container-spacing;
+    padding: $mobile-grid-gap;
   }
 
   .team__grid {

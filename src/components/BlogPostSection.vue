@@ -47,6 +47,7 @@ export default {
   .blog-post-section__grid {
     display: grid;
     grid-template-columns: 1fr;
+    padding: 0 10px 0 10px;
   }
 }
 </style>

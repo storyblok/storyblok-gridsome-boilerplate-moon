@@ -124,7 +124,7 @@ export default {
 
   .call-to-about-image {
     margin: 0 auto;
-    width: 100%;
+    width: 95%;
     float: none;
   }
 
