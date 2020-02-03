@@ -86,8 +86,8 @@ export default {
 }
 
 .principal-blog-post__divisor.divisor {
-  margin: 5px 0 40px 0;
-  width: 150px;
+  margin: 40px 0 40px 0;
+  // width: 150px;
 }
 
 .principal-blog-post__description {
@@ -153,6 +153,8 @@ export default {
   .principal-blog-post__divisor.divisor {
     align-items: baseline;
     z-index: 1;
+    margin: 5px 0 40px 0;
+    width: 150px;
   }
 
   .principal-blog-post__left a {
