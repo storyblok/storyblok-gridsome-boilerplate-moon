@@ -32,7 +32,7 @@ export default {
   padding: $desktop-container-spacing;
   text-align: center;
   margin-bottom: 30px;
-  margin-top: $desktop-container-spacing * 2;
+  margin-top: $desktop-container-spacing ;
 }
 
 .copyright-image {

@@ -52,6 +52,7 @@ export default {
   background-origin: top;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .blog-post-header__image {

@@ -138,6 +138,10 @@ export default {
 
   .call-to-about-section_title { 
     margin-top: 0px;
+    font-size: 65px;
+    font-weight: bold;
+    line-height: 1.10;
+    font-size: 50px;
   }
 
   .about-button {

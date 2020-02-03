@@ -27,7 +27,7 @@ export default {
   }
 
   .teaser .c-image {
-    margin-bottom: $mobile-inner-spacing;
+    margin-bottom: $mobile-inner-spacing * 3;
   }
 }
 </style>
