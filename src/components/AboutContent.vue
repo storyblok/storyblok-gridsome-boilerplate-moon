@@ -125,4 +125,10 @@ export default {
     padding: $mobile-container-spacing;
   }
 }
+
+@media screen and (min-width: 1440px){
+  .about-content__grid {
+    min-height: auto;
+  }
+}
 </style>

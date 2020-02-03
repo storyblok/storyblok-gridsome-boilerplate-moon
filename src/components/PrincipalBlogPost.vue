@@ -162,4 +162,10 @@ export default {
     background-color: transparent;
   }
 }
+
+@media screen and (min-width: 1440px){
+  .principal-blog-post {
+    height: 600px;
+  }
+}
 </style>

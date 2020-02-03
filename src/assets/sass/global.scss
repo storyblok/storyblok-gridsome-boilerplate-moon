@@ -21,7 +21,8 @@ a {
 }
 
 /* utilities */
-.container {
+.container, .layout {
+  margin: auto;
   max-width: 1440px;
 }
 
@@ -63,7 +64,7 @@ a {
   p, a, div, section {
     text-align: center;
   }
-  
+
   .only-desktop {
     display: none;
   }
