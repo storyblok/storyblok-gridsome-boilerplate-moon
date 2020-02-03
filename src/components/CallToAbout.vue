@@ -74,7 +74,7 @@ export default {
   height: 356px;
   float: left;
   position: relative;
-  margin-left: -278px;
+  margin-left: -458px;
   margin-top: 100px;
 }
 
@@ -94,7 +94,7 @@ export default {
   width: 556px;
   height: 356px;
   margin-top: 100px;
-  padding-left: $desktop-grid-gap;
+  // padding-left: $desktop-grid-gap;
   padding-right: $desktop-grid-gap;
 }
 

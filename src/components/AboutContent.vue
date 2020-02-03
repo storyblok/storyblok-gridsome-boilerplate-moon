@@ -119,7 +119,10 @@ export default {
   .about-content__markdown {
     width: 100%;
     order: 1;
-    padding: 0;
+  }
+
+  .about-content__markdown , .about-content__subtitle {
+    padding: $mobile-container-spacing;
   }
 }
 </style>
