@@ -22,6 +22,9 @@ export default function (Vue, { router, head, isClient }) {
 
   router.beforeEach((_, from, next) => {
     if (from.name !== null) {
+      if (from.query._storyblok) {
+        return next(false)
+      }
       NProgress.start()
     }
     next()
