@@ -81,3 +81,17 @@ a {
     display: none;
   }
 }
+
+// overwrite the nprogress CSS rules
+#nprogress .bar {
+  background: $secondary-color;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px $secondary-color, 0 0 5px $secondary-color;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: $secondary-color;
+  border-left-color: $secondary-color;
+}

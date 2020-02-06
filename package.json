@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "gridsome": "^0.7.0",
-    "gridsome-source-storyblok": "^0.2.2"
+    "gridsome-source-storyblok": "^0.2.2",
+    "nprogress": "^0.2.0"
   },
   "devDependencies": {
     "node-sass": "^4.13.1",
