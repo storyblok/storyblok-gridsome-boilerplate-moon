@@ -6,39 +6,39 @@
   >
     <div
       class="blog-card__backgroud"
-      :style="{ 'backgroundColor': item.metadata_color }"
+      :style="{ 'backgroundColor': header.metadata_color }"
     />
 
     <div
       class="blog-card__image"
       :class="{ 'blog-card__image--reverse': reverse }"
     >
-      <img :src="item.image" :alt="'Image of the ' + item.title" />
+      <CImage :image="header.image" :alt="'Image of the ' + header.title" />
 
-      <g-link :to="item.link.cached_url" :title="'Link to the article ' + item.title">
+      <g-link :to="url" :title="'Link to the article ' + header.title">
         <img class="only-desktop" src="/more-icon.svg" alt="" />
       </g-link>
     </div>
 
     <div class="blog-card__text-container">
       <g-link
-        :to="item.link.cached_url"
-        :title="'Link to the article ' + item.title"
+        :to="url"
+        :title="'Link to the article ' + header.title"
         class="blog-card__text-container__title"
       >
-        {{item.title}}
+        {{header.title}}
       </g-link>
       <p class="blog-card__text-container__description">
-        {{item.description}}
+        {{header.summary}}
       </p>
       <p class="blog-card__text-container__date">
         Space {{articlePublished}}
       </p>
 
       <g-link 
-        :to="item.link.cached_url" 
+        :to="url" 
         class="only-mobile link button is-primary"
-        :title="'Link to the article ' + item.title"
+        :title="'Link to the article ' + header.title"
       >
         Read the article
       </g-link>
@@ -50,13 +50,16 @@
 import { getPublishedFormatDate } from '../utils/article'
 export default {
   name: 'BlogCard',
-  props: ['item', 'reverse'],
+  props: ['item', 'reverse', 'url'],
   computed: {
     articlePublished () {
-      if (this.item) {
-        return getPublishedFormatDate(this.item)
+      if (this.header) {
+        return getPublishedFormatDate(this.header)
       }
       return ''
+    },
+    header () {
+      return this.item.header[0] || {}
     }
   }
 }
