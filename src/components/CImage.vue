@@ -1,6 +1,6 @@
 <template>
   <figure class="c-image">
-    <g-image :src="imageURL" alt="Image of logo"/>
+    <g-image :src="imageURL" alt="Image of logo" v-if="imageURL" />
   </figure>
 </template>
 

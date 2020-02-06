@@ -2,7 +2,7 @@
   <div v-editable="blok">
     <div class="copyright">
       <a href="https://storyblok.com" title="Link to Storyblok site"> 
-        <img class="copyright-image" :src="imageLink" alt="Image of the logo">
+        <img class="copyright-image" :src="imageLink" alt="Image of the logo" v-if="imageLink">
       </a>
     </div>
   </div>
@@ -21,7 +21,7 @@ export default {
           return this.blok.logo
         }
       }
-      return ''
+      return false
     }
   }
 }
