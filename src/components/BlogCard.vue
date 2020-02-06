@@ -21,9 +21,13 @@
     </div>
 
     <div class="blog-card__text-container">
-      <p class="blog-card__text-container__title">
+      <g-link
+        :to="item.link.cached_url"
+        :title="'Link to the article ' + item.title"
+        class="blog-card__text-container__title"
+      >
         {{item.title}}
-      </p>
+      </g-link>
       <p class="blog-card__text-container__description">
         {{item.description}}
       </p>
