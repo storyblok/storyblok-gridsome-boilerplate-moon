@@ -42,6 +42,7 @@ export default {
   position: relative;
   font-size: 18px;
   font-weight: normal;
+  font-weight: bold;
   transition: all 0.3s ease-in-out;
   outline: none;
 }
@@ -60,10 +61,6 @@ export default {
 .navigation .link:hover,
 .link.active--exact {
   color: $secondary-color;
-}
-
-.link.active--exact {
-  font-weight: bold;
 }
 
 .navigation .link:hover::after,
