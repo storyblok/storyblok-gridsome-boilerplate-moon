@@ -41,6 +41,17 @@ module.exports = function (api) {
 
     // for each content found create a page
     nodes.forEach(node => {
+      if (node.full_slug === 'home') {
+        createPage({
+          path: '/',
+          component: './src/templates/StoryblokEntry.vue',
+          context: {
+            id: node.id,
+            globalContent
+          }
+        })
+      }
+
       createPage({
         path: `/${node.full_slug}`,
         component: './src/templates/StoryblokEntry.vue',
