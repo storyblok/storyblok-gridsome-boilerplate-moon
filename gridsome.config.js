@@ -13,6 +13,8 @@ function addStyleResource (rule) {
 
 module.exports = {
   siteName: 'Gridsome Multilanguage Website',
+  siteDescription: 'A demonstration website of use Storyblok with Gridsome',
+  siteUrl: 'https://demo.storyblok.com',
   plugins: [
     {
       use: 'gridsome-source-storyblok',

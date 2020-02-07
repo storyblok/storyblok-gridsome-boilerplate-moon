@@ -43,6 +43,9 @@ export default {
       oldPath: ''
     }
   },
+  metaInfo: {
+    title: 'Editor'
+  },
   mounted() {
     loadStoryblokBridge(() => { this.initStoryblokEvents() })
   },

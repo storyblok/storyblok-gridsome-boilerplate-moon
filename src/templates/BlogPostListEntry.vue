@@ -25,6 +25,9 @@
 <script>
 export default {
   name: 'BlogPostListEntry',
+  metaInfo: {
+    title: 'Blog Posts'
+  },
   computed: {
     posts () {
       return this.$context.posts.filter(post => post.full_slug !== 'blog/')

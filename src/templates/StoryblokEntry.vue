@@ -14,6 +14,11 @@
 <script>
 export default {
   name: 'StoryblokEntryTemplate',
+  metaInfo () {
+    return {
+      title: this.story.name
+    }
+  },
   computed: {
     story () {
       return this.$page.storyblokEntry
@@ -26,6 +31,7 @@ export default {
 query StoryblokEntry ($id: ID) {
   storyblokEntry (id: $id) {
     id
+    name
     slug
     content
   }
