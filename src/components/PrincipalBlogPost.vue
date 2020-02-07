@@ -168,4 +168,23 @@ export default {
     height: 600px;
   }
 }
+
+@media screen and (max-height: 400px){
+  .principal-blog-post__divisor.divisor {
+    margin: 0;
+  }
+
+  .principal-blog-post__left {
+    padding: 10px;
+  }
+
+  .principal-blog-post__title {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  
+  .principal-blog-post {
+    margin-bottom: 10px;
+  }
+}
 </style>

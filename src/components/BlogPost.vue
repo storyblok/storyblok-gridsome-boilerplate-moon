@@ -4,7 +4,11 @@
 
     <BlogPostContent :blok="blok.content" />
 
-    <BlogCard :item="setItem" />
+    <BlogCard
+      :item="nextPost.content"
+      :reverse="false"
+      :url="nextPost.full_slug"
+    />
   </section>
 </template>
 
@@ -14,18 +18,39 @@ export default {
   props: ['blok'],
 
   computed: {
-    setItem () {
-      if (this.blok) {
-        if (this.blok.post) {
-          return this.blok.post[0].posts[0]
-        }
+    nextPostUuid () {
+      return this.blok.next_post
+    },
+    hasNextPost () {
+      return Object.keys(this.nextPost).length > 0
+    },
+    posts () {
+      return this.$static.allStoryblokEntry.edges.map(({ node }) => node)
+    },
+    nextPost () {
+      const result = this.posts.filter(post => post.uuid === this.nextPostUuid)
+
+      if (result.length) {
+        return result[0] || {}
       }
-      return ''
+
+      return {}
     }
   }
 }
 </script>
 
-<style>
-
-</style>
+<static-query>
+{
+  allStoryblokEntry {
+    totalCount
+    edges {
+      node {
+        uuid
+        full_slug
+        content
+      }
+    }
+  }
+}
+</static-query>
