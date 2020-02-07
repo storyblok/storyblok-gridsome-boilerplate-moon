@@ -56,24 +56,22 @@ module.exports = function (api) {
         })
       }
 
-      if (node.full_slug === 'blog/') {
-        createPage({
-          path: '/blog',
-          component: './src/templates/BlogPostListEntry.vue',
-          context: {
-            posts: blogPosts,
-            globalContent
-          }
-        })
-      } else {
-        createPage({
-          path: `/${node.full_slug}`,
-          component: './src/templates/StoryblokEntry.vue',
-          context: {
-            id: node.id,
-            globalContent
-          }
-        })
+      createPage({
+        path: `/${node.full_slug}`,
+        component: './src/templates/StoryblokEntry.vue',
+        context: {
+          id: node.id,
+          globalContent
+        }
+      })
+    })
+
+    createPage({
+      path: '/blog',
+      component: './src/templates/BlogPostListEntry.vue',
+      context: {
+        posts: blogPosts,
+        globalContent
       }
     })
   })
