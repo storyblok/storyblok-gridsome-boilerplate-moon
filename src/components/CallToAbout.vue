@@ -113,7 +113,7 @@ export default {
   margin-top: $desktop-grid-gap;
 }
 
-@media (max-width: 762px) {
+@media screen and (max-width: 762px) {
   .call-to-about {
     display: inline;
   }
@@ -147,7 +147,17 @@ export default {
   .about-button {
     margin: 0 auto;
   }
-
 } 
+
+@media screen and (max-width: 1200px){
+  .call-to-about-section {
+    padding: $mobile-container-spacing;
+  }
+
+  .call-to-about-section_title {
+    font-size: 55px;
+    margin-top: 0;
+  }
+}
 
 </style>
