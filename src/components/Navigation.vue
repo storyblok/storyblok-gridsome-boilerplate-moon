@@ -8,6 +8,9 @@
         <g-link
           :to="item.link.cached_url"
           class="link"
+          :class="{
+            'active--exact active': isIndexRoute && isHomeRoute(item.link)
+          }"
           :title=" 'Link to ' + item.name + ' page'"
         >
           {{ item.name }}
@@ -24,6 +27,16 @@ export default {
     items: {
       type: Array,
       defaut: () => []
+    }
+  },
+  computed: {
+    isIndexRoute () {
+      return this.$route.path === '/'
+    }
+  },
+  methods: {
+    isHomeRoute (link) {
+      return link.cached_url === 'home'
     }
   }
 }
