@@ -17,7 +17,10 @@
         />
       </div>
 
-      <Pager :info="pageInfo" />
+      <Pager
+        class="pagination-container"
+        :info="pageInfo"
+      />
     </section>
   </Layout>
 </template>
@@ -50,6 +53,39 @@ export default {
   color: #000000;
 }
 
+.pagination-container {
+  text-align: center;
+
+  a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 10px;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+    border: solid 1px #e1e1e1;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:not(.active--exact):hover {
+      color: $secondary-color;
+      border-color: $secondary-color;
+    }
+  }
+
+  a.active--exact {
+    background-color: $primary-color;
+    color: #fff;
+  }
+}
+
 @media screen and (max-width: $mobile) {
   .blog__title {
     font-size: 35px;
@@ -58,8 +94,8 @@ export default {
 </style>
 
 <page-query>
-query {
-  posts: allStoryblokEntry (filter: { full_slug: { regex: "blog/*" } }) @paginate {
+query ($page: Int) {
+  posts: allStoryblokEntry (perPage: 2, page: $page, filter: { full_slug: { regex: "blog/*" } }) @paginate {
     totalCount
     pageInfo {
       totalPages
