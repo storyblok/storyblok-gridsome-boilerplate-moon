@@ -33,4 +33,15 @@ export default function (Vue, { router, head, isClient }) {
   router.afterEach(() => {
     NProgress.done()
   })
+
+  // setup head
+  head.meta.push({
+    property: 'og:image',
+    content: 'https://demo.storyblok.com/meta-image.jpg'
+  })
+
+  head.meta.push({
+    property: 'twitter:image',
+    content: 'https://demo.storyblok.com/meta-image.jpg'
+  })
 }
