@@ -1,6 +1,6 @@
 <template>
   <Layout
-    :global-content="global.content">
+    :global-content="globalData.content">
     <component
       v-if="story.content.component"
       :key="story.content._uid"
@@ -41,8 +41,12 @@ export default {
   data() {
     return {
       story: {content: {}},
-      global: {content: {}},
       oldPath: ''
+    }
+  },
+  computed: {
+    globalData () {
+      return this.$page.global.edges[0].node
     }
   },
   metaInfo () {
@@ -66,17 +70,8 @@ export default {
         this.story = data.story
       })
     },
-    async loadGlobalContent() {
-      await window.storyblok.get({
-        slug: 'global',
-        version: 'draft'
-      }, (data) => {
-        this.global = data.story
-      })
-    },
     initStoryblokEvents() {
       this.loadStory()
-      this.loadGlobalContent()
 
       let sb = window.storyblok
 
@@ -100,3 +95,17 @@ export default {
   }
 }
 </script>
+
+<page-query>
+{
+  global: allStoryblokEntry (filter: { slug: { eq: "global" } }) {
+    edges {
+      node {
+        id
+        full_slug
+        content
+      }
+    }
+  }
+}
+</page-query>

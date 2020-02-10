@@ -1,7 +1,5 @@
 <template>
-  <Layout
-    :global-content="$context.globalContent.content"
-  >
+  <Layout :global-content="globalData.content">
     <component
       v-if="story.content.component"
       :key="story.content._uid"
@@ -31,6 +29,9 @@ export default {
   computed: {
     story () {
       return this.$page.storyblokEntry
+    },
+    globalData () {
+      return this.$page.global.edges[0].node
     }
   }
 }
@@ -44,6 +45,16 @@ query StoryblokEntry ($id: ID) {
     slug
     full_slug
     content
+  }
+
+  global: allStoryblokEntry (filter: { slug: { eq: "global" } }) {
+    edges {
+      node {
+        id
+        full_slug
+        content
+      }
+    }
   }
 }
 </page-query>

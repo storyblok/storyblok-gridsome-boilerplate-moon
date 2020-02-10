@@ -26,32 +26,15 @@ module.exports = function (api) {
 
     // split contents and globalContent story from edges
     const edges = data.allStoryblokEntry.edges || []
-    const { nodes, globalContent, blogPosts } = edges.reduce((acc, edge) => {
-      if (edge.node.content.component === 'global') {
-        acc['globalContent'] = edge.node
-      } else if (edge.node.full_slug.includes('blog/')) {
-        acc['blogPosts'].push(edge.node)
-        acc['nodes'].push(edge.node)
-      } else {
-        acc['nodes'].push(edge.node)
-      }
-
-      return acc
-    }, {
-      nodes: [],
-      globalContent: {},
-      blogPosts: []
-    })
 
     // for each content found create a page
-    nodes.forEach(node => {
+    edges.forEach(({ node }) => {
       if (node.full_slug === 'home') {
         createPage({
           path: '/',
           component: './src/templates/StoryblokEntry.vue',
           context: {
-            id: node.id,
-            globalContent
+            id: node.id
           }
         })
       }
@@ -60,19 +43,9 @@ module.exports = function (api) {
         path: `/${node.full_slug}`,
         component: './src/templates/StoryblokEntry.vue',
         context: {
-          id: node.id,
-          globalContent
+          id: node.id
         }
       })
-    })
-
-    createPage({
-      path: '/blog',
-      component: './src/templates/BlogPostListEntry.vue',
-      context: {
-        posts: blogPosts,
-        globalContent
-      }
     })
   })
 }
