@@ -12,12 +12,21 @@
 </template>
 
 <script>
+import { getMetadataToPage } from '../utils/meta-tags'
+
 export default {
   name: 'StoryblokEntryTemplate',
   metaInfo () {
-    return {
-      title: this.story.name
+    const config = {
+      title: this.story.name,
+      path: `/${this.story.full_slug}`
     }
+
+    if (this.story.full_slug.indexOf('blog') !== -1) {
+      config['description'] = this.story.content.summary
+    }
+
+    return getMetadataToPage(config)
   },
   computed: {
     story () {
@@ -33,6 +42,7 @@ query StoryblokEntry ($id: ID) {
     id
     name
     slug
+    full_slug
     content
   }
 }

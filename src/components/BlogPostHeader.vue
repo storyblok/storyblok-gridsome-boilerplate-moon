@@ -6,13 +6,13 @@
   >
     <div class="blog-post-header__text">
       <h1 class="blog-post-header__text__title">
-        {{ headerData.title }}
+        {{ blok.title }}
       </h1>
 
       <div class="blog-post-header__text__divisor" />
 
       <h2 class="blog-post-header__text__summary">
-        {{ headerData.summary }}
+        {{ blok.summary }}
       </h2>
     </div>
 
@@ -29,13 +29,14 @@ export default {
   name: 'BlogPostHeader',
   props: ['blok'],
   computed: {
-    headerData () {
-      return this.blok[0] || {}
-    },
     blogPostHeaderStyle () {
-      return {
-        'background-image': `url(https:${this.blok.image.url})`
+      if (this.blok.image) {
+        return {
+          'background-image': `url(https:${this.blok.image.url})`
+        }
       }
+
+      return {}
     }
   }
 }

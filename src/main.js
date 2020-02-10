@@ -5,6 +5,7 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import DefaultLayout from '~/layouts/Default.vue'
 import Components from './components'
+import { setupMetaTags } from './utils/meta-tags'
 
 import './assets/css/reset.css'
 import './assets/sass/global.scss'
@@ -35,13 +36,5 @@ export default function (Vue, { router, head, isClient }) {
   })
 
   // setup head
-  head.meta.push({
-    property: 'og:image',
-    content: 'https://demo.storyblok.com/meta-image.jpg'
-  })
-
-  head.meta.push({
-    property: 'twitter:image',
-    content: 'https://demo.storyblok.com/meta-image.jpg'
-  })
+  setupMetaTags({ head })
 }

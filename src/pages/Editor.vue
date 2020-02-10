@@ -11,6 +11,8 @@
 </template>
 
 <script>
+import { getMetadataToPage } from '../utils/meta-tags'
+
 const getParam = function(val) {
   var result = '',
       tmp = []
@@ -43,8 +45,11 @@ export default {
       oldPath: ''
     }
   },
-  metaInfo: {
-    title: 'Editor'
+  metaInfo () {
+    return getMetadataToPage({
+      title: 'Editor',
+      path: '/editor'
+    })
   },
   mounted() {
     loadStoryblokBridge(() => { this.initStoryblokEvents() })
