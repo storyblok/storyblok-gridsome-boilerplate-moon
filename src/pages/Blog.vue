@@ -20,6 +20,8 @@
       <Pager
         class="pagination-container"
         :info="pageInfo"
+        prevLabel="<"
+        nextLabel=">"
       />
     </section>
   </Layout>
@@ -83,6 +85,7 @@ export default {
   a.active--exact {
     background-color: $primary-color;
     color: #fff;
+    border-color: $primary-color;
   }
 }
 
