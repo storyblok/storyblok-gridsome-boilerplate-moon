@@ -32,7 +32,7 @@ export default {
     blogPostHeaderStyle () {
       if (this.blok.image) {
         return {
-          'background-image': `url(https:${this.blok.image.url})`
+          'background-image': `url(https:${this.blok.image.url || this.blok.image})`
         }
       }
 
