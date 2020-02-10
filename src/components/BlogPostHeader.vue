@@ -34,7 +34,7 @@ export default {
     },
     blogPostHeaderStyle () {
       return {
-        'background-image': `url(https:${this.headerData.image.url})`
+        'background-image': `url(https:${this.blok.image.url})`
       }
     }
   }
