@@ -9,7 +9,7 @@
           :to="item.link.cached_url"
           class="link"
           :class="{
-            'active--exact active': isIndexRoute && isHomeRoute(item.link)
+            'active--exact active': checkActiveClass(item.link)
           }"
           :title=" 'Link to ' + item.name + ' page'"
         >
@@ -32,11 +32,22 @@ export default {
   computed: {
     isIndexRoute () {
       return this.$route.path === '/'
+    },
+    isBlogRoute () {
+      return this.$route.path.indexOf('blog/') !== -1
     }
   },
   methods: {
-    isHomeRoute (link) {
+    inHomeRouteLink (link) {
       return link.cached_url === 'home'
+    },
+    inBlogRouteLink (link) {
+      return link.cached_url.indexOf('blog/') !== -1
+    },
+    checkActiveClass (link) {
+      const homeCondition = this.isIndexRoute && this.inHomeRouteLink(link)
+      const blogCondition = this.isBlogRoute && this.inBlogRouteLink(link)
+      return homeCondition || blogCondition
     }
   }
 }
