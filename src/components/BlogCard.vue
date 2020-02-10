@@ -6,16 +6,15 @@
   >
     <div
       class="blog-card__backgroud"
-      :style="{ 'backgroundColor': header.metadata_color }"
     />
 
     <div
       class="blog-card__image"
       :class="{ 'blog-card__image--reverse': reverse }"
     >
-      <CImage :image="header.image" :alt="'Image of the ' + header.title" />
+      <CImage :image="item.image" :alt="'Image of the ' + item.title" />
 
-      <g-link :to="url" :title="'Link to the article ' + header.title">
+      <g-link :to="url" :title="'Link to the article ' + item.title">
         <img class="only-desktop" src="/more-icon.svg" alt="" />
       </g-link>
     </div>
@@ -23,22 +22,22 @@
     <div class="blog-card__text-container">
       <g-link
         :to="url"
-        :title="'Link to the article ' + header.title"
+        :title="'Link to the article ' + item.title"
         class="blog-card__text-container__title"
       >
-        {{header.title}}
+        {{item.title}}
       </g-link>
       <p class="blog-card__text-container__description">
-        {{header.summary}}
+        {{item.summary}}
       </p>
       <p class="blog-card__text-container__date">
-        Space {{articlePublished}}
+        {{articlePublished}}
       </p>
 
       <g-link 
         :to="url" 
         class="only-mobile link button is-primary"
-        :title="'Link to the article ' + header.title"
+        :title="'Link to the article ' + item.title"
       >
         Read the article
       </g-link>
@@ -53,13 +52,10 @@ export default {
   props: ['item', 'reverse', 'url'],
   computed: {
     articlePublished () {
-      if (this.header) {
-        return getPublishedFormatDate(this.header)
+      if (this.item) {
+        return getPublishedFormatDate(this.item)
       }
       return ''
-    },
-    header () {
-      return this.item.header[0] || {}
     }
   }
 }
@@ -83,6 +79,7 @@ export default {
 .blog-card__backgroud {
   width: 556px;
   height: 556px;
+  background: #dfe4e6;
 }
 
 .blog-card__image {

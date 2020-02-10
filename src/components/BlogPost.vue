@@ -1,13 +1,13 @@
 <template>
   <section class="blog-post" v-editable="blok">
-    <BlogPostHeader :blok="blok.header" />
-
+    <BlogPostHeader :blok="blok" />
     <BlogPostContent :blok="blok.content" />
 
     <BlogCard
-      :item="nextPost.content"
+      :item="blok.next_post.content"
       :reverse="false"
-      :url="nextPost.full_slug"
+      :url="blok.next_post.full_slug"
+      v-if="blok.next_post && blok.next_post.content"
     />
   </section>
 </template>
@@ -15,42 +15,6 @@
 <script>
 export default {
   name: 'BlogPost',
-  props: ['blok'],
-
-  computed: {
-    nextPostUuid () {
-      return this.blok.next_post
-    },
-    hasNextPost () {
-      return Object.keys(this.nextPost).length > 0
-    },
-    posts () {
-      return this.$static.allStoryblokEntry.edges.map(({ node }) => node)
-    },
-    nextPost () {
-      const result = this.posts.filter(post => post.uuid === this.nextPostUuid)
-
-      if (result.length) {
-        return result[0] || {}
-      }
-
-      return {}
-    }
-  }
+  props: ['blok']
 }
 </script>
-
-<static-query>
-{
-  allStoryblokEntry {
-    totalCount
-    edges {
-      node {
-        uuid
-        full_slug
-        content
-      }
-    }
-  }
-}
-</static-query>

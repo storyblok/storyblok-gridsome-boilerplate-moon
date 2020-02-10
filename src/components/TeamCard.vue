@@ -1,7 +1,7 @@
 <template>
   <div class="team-card" v-editable="blok">
     <img 
-      :src="blok.image.url" 
+      :src="blok.image.url || blok.image" 
       :alt="'Image of the astronaut ' + blok.name" 
       class="team-card__image"
     >

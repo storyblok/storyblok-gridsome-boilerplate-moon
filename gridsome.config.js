@@ -22,6 +22,7 @@ module.exports = {
         client: {
           accessToken: process.env.GRIDSOME_SPACE_TOKEN
         },
+        params: {resolve_relations: 'blog-post.next_post'},
         downloadImages: true,
         imageDirectory: 'assets/images'
       }
