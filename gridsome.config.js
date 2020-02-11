@@ -22,6 +22,7 @@ module.exports = {
         client: {
           accessToken: 'F42hKl0MIWzMo9b3vyQ03Att'
         },
+        version: 'published',
         params: {resolve_relations: 'blog-post.next_post'},
         downloadImages: true,
         imageDirectory: 'assets/images'
