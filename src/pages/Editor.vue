@@ -31,7 +31,7 @@ const getParam = function(val) {
 const loadStoryblokBridge = function(cb) {
   let script = document.createElement('script')
   script.type = 'text/javascript'
-  script.src = `//app.storyblok.com/f/storyblok-latest.js?t=${getParam('token')}`
+  script.src = `//app.storyblok.com/f/storyblok-latest.js?t=${getParam('token') || 'F42hKl0MIWzMo9b3vyQ03Att'}`
   script.onload = cb
   document.getElementsByTagName('head')[0].appendChild(script)
 }
