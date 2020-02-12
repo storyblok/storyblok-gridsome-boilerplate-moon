@@ -32,6 +32,14 @@ yarn dev # or npm run dev
 yarn build # or npm run build
 ```
 
+### Storyblok Preview Location Configuration
+
+Details on: https://www.storyblok.com/tp/gridsome-multilanguage-website-tutorial#add-the-editor-page
+
+```
+http://localhost:8080/editor?path=
+```
+
 ---
 
 Powered by [Storyblok](https://www.storyblok.com/)
