@@ -20,6 +20,33 @@ $ git clone https://github.com/storyblok/gridsome-multilanguage-website.git
 $ yarn # or npm install
 ```
 
+## Storyblok client configuration
+
+To configure the Storyblok client we have to change the access Token, to get the token you need a [Storyblok account](https://app.storyblok.com/#!/), now that you have the token, we will go to the `gridsome.config.js` file and change the token, the file is at the root of the project:
+
+```js
+  // in gridsome.config.js
+  module.exports = {
+    siteName: 'Gridsome Multilanguage Website',
+    plugins: [
+      {
+        use: 'gridsome-source-storyblok',
+        options: {
+          client: {
+            accessToken: '<Your_Access_Token_Here>'
+          },
+          version: 'published',
+          params: {resolve_relations: 'blog-post.next_post'},
+          downloadImages: true,
+          imageDirectory: 'assets/images'
+        }
+      }
+    ],
+  }
+```
+
+For more information about our Gridsome plugin, visit the Github [repository](https://github.com/storyblok/gridsome-source-storyblok#gridsome-source-storyblok).
+
 ### Run project in develop mode
 
 ```sh
@@ -30,22 +57,6 @@ $ yarn develop # or npm run develop
 
 ```sh
 $ yarn build # or npm run build
-```
-
-## Configuration
-
-If you don't already have a <strong>Storyblok</strong> account, create one, it's fast, click [here](https://app.storyblok.com/#!/).
-
-Change the access token by your token, in the file  `gridsome.config.js`, the file is at the root of the project.
-
-```js
-  // ... previous code
-  options: {
-    client: {
-      accessToken: 'Your_Access_Token_Here'
-    },
-    version: 'published',
-  // ...
 ```
 
 ### Storyblok Preview Location Configuration
