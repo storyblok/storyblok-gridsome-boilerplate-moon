@@ -63,6 +63,15 @@ $ yarn build # or npm run build
 
 See how to set up your location [here](https://www.storyblok.com/tp/gridsome-multilanguage-website-tutorial#add-the-editor-page).
 
+## Duplicate this project in Storyblok
+
+To duplicate this project in your Storyblok account, follow this instructions:
+
+1. Create a Storyblok account (if you don't have one)
+2. Call [this URL](https://app.storyblok.com/#!/build/73623) (It will create a space in your account with all stories and some settings from this project)
+3. Setup the preview URL
+4. Configure the token that you want to use
+
 ---
 
 <p align="center">
