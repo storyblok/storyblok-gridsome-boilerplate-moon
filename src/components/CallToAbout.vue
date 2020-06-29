@@ -33,6 +33,7 @@
 
 <script>
 import Link from './Link'
+import { getImageMetaData } from '../utils/image'
 
 export default {
   name: 'CallToAbout',
@@ -42,8 +43,10 @@ export default {
   },
   computed: {
     callToAboutImageStyle () {
+      const { url } = getImageMetaData(this.blok.image)
+
       return {
-        'background-image': `url(https:${this.blok.image})`
+        'background-image': `url('https:${url}')`
       }
     }
   }

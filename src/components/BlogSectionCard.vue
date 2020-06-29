@@ -1,8 +1,10 @@
 <template>
   <div class="article-card" v-editable="blok">
-    <figure class="article-card__image">
-      <img :src="blok.image" :alt="'Image of the' + blok.title" :title="`Check out the post ${blok.title}`">
-    </figure>
+    <CImage
+      class="article-card__image"
+      :image="blok.image"
+      :alt="'Image of the' + blok.title" :title="`Check out the post ${blok.title}`"
+    />
 
     <g-link
       :to="blok.link.cached_url"

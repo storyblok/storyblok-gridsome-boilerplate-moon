@@ -1,10 +1,10 @@
 <template>
   <div class="team-card" v-editable="blok">
-    <img 
-      :src="blok.image.url || blok.image" 
+    <CImage
+      :image="blok.image" 
       :alt="'Image of the astronaut ' + blok.name" 
       class="team-card__image"
-    >
+    />
 
     <h3 class="team-card__title">
       {{ blok.name }}
@@ -26,7 +26,6 @@ export default {
 <style lang="scss">
 .team-card__image {
   width: 100%;
-  min-height: 300px;
 }
 
 .team-card__title {

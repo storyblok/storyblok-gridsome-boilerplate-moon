@@ -1,13 +1,18 @@
 <template>
   <figure class="c-image">
-    <g-image :src="imageURL" alt="Image of logo" v-if="imageURL" />
+    <g-image
+      :src="imageURL"
+      :alt="alt"
+      :title="title"
+      v-if="imageURL"
+    />
   </figure>
 </template>
 
 <script>
 export default {
   name: 'CImage',
-  props: ['image'],
+  props: ['image', 'alt', 'title'],
   computed: {
     imageURL () {
       if (typeof this.image === 'string') {
@@ -25,6 +30,7 @@ export default {
 
 <style>
 .c-image img {
-  max-width: 95%;
+  width: 100%;
+  max-width: 100%;
 }
 </style>

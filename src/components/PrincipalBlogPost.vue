@@ -31,6 +31,7 @@
 
 <script>
 import { getPublishedFormatDate } from '../utils/article'
+import { getImageMetaData } from '../utils/image'
 
 export default {
   name: 'PrincipalBlogPost',
@@ -43,8 +44,10 @@ export default {
       return ''
     },
     principalBlogPostStyle () {
+      const { url } = getImageMetaData(this.blok.image)
+
       return {
-        'background-image': `url('https:${this.blok.image}')`
+        'background-image': `url('https:${url}')`
       }
     }
   }

@@ -25,14 +25,18 @@
 </template>
 
 <script>
+import { getImageMetaData } from '../utils/image'
+
 export default {
   name: 'BlogPostHeader',
   props: ['blok'],
   computed: {
     blogPostHeaderStyle () {
       if (this.blok.image) {
+        const { url } = getImageMetaData(this.blok.image)
+
         return {
-          'background-image': `url(https:${this.blok.image.url || this.blok.image})`
+          'background-image': `url(https:${url})`
         }
       }
 
