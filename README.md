@@ -36,9 +36,15 @@ To configure the Storyblok client we have to change the access Token, to get the
             accessToken: '<Your_Access_Token_Here>'
           },
           version: 'published',
-          params: {resolve_relations: 'blog-post.next_post'},
           downloadImages: true,
-          imageDirectory: 'assets/images'
+          imageDirectory: 'assets/images',
+          types: {
+            story: {
+              params: {
+                resolve_relations: 'blog-post.next_post'
+              }
+            }
+          }
         }
       }
     ],
