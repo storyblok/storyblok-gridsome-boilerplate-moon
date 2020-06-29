@@ -23,9 +23,15 @@ module.exports = {
           accessToken: 'BTMojCrwizNsz0Haf5VmjQtt' // Your_Access_Token_Here
         },
         version: 'published',
-        params: {resolve_relations: 'blog-post.next_post'},
         downloadImages: true,
-        imageDirectory: 'assets/images'
+        imageDirectory: 'assets/images',
+        types: {
+          story: {
+            params: {
+              resolve_relations: 'blog-post.next_post'
+            }
+          }
+        }
       }
     }
   ],
