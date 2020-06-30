@@ -65,7 +65,8 @@ export default {
       }
       window.storyblok.get({
         slug: getParam('path') || this.oldPath,
-        version: 'draft'
+        version: 'draft',
+        resolve_relations: 'blog-post.next_post'
       }, (data) => {
         this.story = data.story
       })
