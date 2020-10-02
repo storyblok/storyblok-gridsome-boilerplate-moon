@@ -3947,12 +3947,12 @@ graphql@^14.4.2:
   dependencies:
     iterall "^1.2.2"
 
-gridsome-source-storyblok@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/gridsome-source-storyblok/-/gridsome-source-storyblok-1.0.2.tgz#2356f90152b3b6fbe309c4f0c7bc8a83d0a60196"
-  integrity sha512-g685oYTwzENMuwAzGBcDP82yQcmrOrjMlMgZWT4xzP0Dyj9R3XDaXSvZmkYzY8tICmhkvJqOOxAllk5zsOG98A==
+gridsome-source-storyblok@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gridsome-source-storyblok/-/gridsome-source-storyblok-1.1.0.tgz#5694c46537cbe49a97e0128fa7184fb23911de60"
+  integrity sha512-AroyFBExShkZVQlif2fD36SMB4gN7t1cc7lRjfU+zRq/lChlLuA8IIbBOcYr/SeatIcChEljKvJFH9F4CT4IJA==
   dependencies:
-    lodash "^4.17.15"
+    lodash "^4.17.20"
     storyblok-js-client "^2.5.0"
     storyblok-vue "^1.0.5"
 
@@ -5115,6 +5115,11 @@ lodash@^4.0.0, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.1
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+
+lodash@^4.17.20:
+  version "4.17.20"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
+  integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
 
 log-update@^2.3.0:
   version "2.3.0"
