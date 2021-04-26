@@ -6,7 +6,7 @@
       <BlogSectionCard
         v-for="(item, key) in blok.list_article_cards"
         :blok="item"
-        :key="key"
+        :key="item._uid"
       />
     </div>
   </section>

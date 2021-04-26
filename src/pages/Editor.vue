@@ -12,6 +12,7 @@
 
 <script>
 import { getMetadataToPage } from '../utils/meta-tags'
+import StoryblokClient from 'storyblok-js-client'
 
 const getParam = function(val) {
   var result = '',
@@ -28,10 +29,14 @@ const getParam = function(val) {
   return result
 }
 
+const SbClient = new StoryblokClient({
+  accessToken: getParam('token') || 'kldAxRYXHaE0nrpdNwffvwtt'
+})
+
 const loadStoryblokBridge = function(cb) {
   let script = document.createElement('script')
   script.type = 'text/javascript'
-  script.src = `//app.storyblok.com/f/storyblok-latest.js?t=${getParam('token') || 'F42hKl0MIWzMo9b3vyQ03Att'}`
+  script.src = `https://app.storyblok.com/f/storyblok-v2-latest.js`
   script.onload = cb
   document.getElementsByTagName('head')[0].appendChild(script)
 }
@@ -63,18 +68,19 @@ export default {
       if (getParam('path') !== '') {
         this.oldPath = getParam('path')
       }
-      window.storyblok.get({
-        slug: getParam('path') || this.oldPath,
+      SbClient.get(`cdn/stories/${getParam('path') || this.oldPath}`, {
         version: 'draft',
         resolve_relations: 'blog-post.next_post'
-      }, (data) => {
-        this.story = data.story
+      }).then((res) => {
+        this.story = res.data.story
       })
     },
     initStoryblokEvents() {
       this.loadStory()
 
-      let sb = window.storyblok
+      let sb = new StoryblokBridge({
+        resolveRelations: ['blog-post.next_post']
+      })
 
       sb.on(['change', 'published'], (payload) => {
         this.loadStory()
@@ -82,13 +88,12 @@ export default {
 
       sb.on('input', (payload) => {
         if (this.story && payload.story.id === this.story.id) {
-          payload.story.content = sb.addComments(payload.story.content, payload.story.id)
           this.story = payload.story
         }
       })
 
       sb.pingEditor(() => {
-        if (sb.inEditor) {
+        if (sb.isInEditor()) {
           sb.enterEditmode()
         }
       })
