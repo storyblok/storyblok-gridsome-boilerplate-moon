@@ -50,7 +50,7 @@ export default {
 .blog-post-header {
   position: relative;
   width: 100%;
-  min-height: 708px;
+  min-height: 708px !important;
   display: flex;
   justify-content: center;
   align-items: center;

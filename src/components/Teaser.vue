@@ -1,6 +1,6 @@
 <template>
   <header class="teaser" v-editable="blok">
-    <CImage :image="blok.logo || {}" />
+    <CImage :image="blok.logo.filename || {}" />
     <Navigation :items="blok.navigation || []" />
   </header>
 </template>

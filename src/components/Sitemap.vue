@@ -1,6 +1,6 @@
 <template>
   <footer class="footer" v-editable="blok">
-    <CImage :image="blokReturn.logo || ''" />
+    <CImage :image="blokReturn.logo.filename || ''" />
     <ul class="footer-links">
       <li 
         v-for="item in blokReturn.map" 

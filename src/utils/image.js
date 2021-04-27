@@ -16,6 +16,17 @@ export const getImageMetaData = imageData => {
     }
   }
 
+  if (imageData.fieldtype === 'asset') {
+    if (typeof imageData.filename === 'object') {
+      return imageData.filename
+    }
+    return {
+      filename: '',
+      url: imageData.filename.replace('https:', ''),
+      path: ''
+    }
+  }
+
   if (imageData.path === undefined || imageData.filename === undefined || imageData.url === undefined) {
     return {
       filename: null,

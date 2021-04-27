@@ -18,6 +18,14 @@ export default {
       if (typeof this.image === 'string') {
         return this.image
       }
+
+      if (typeof this.image === 'object' && this.image.fieldtype === 'asset') {
+        if (typeof this.image.filename === 'object') {
+          return this.image.filename.url
+        }
+        return this.image.filename
+      }
+
       const path = this.image.path || ''
       if (path === '' || path === undefined) {
         return ''
