@@ -15,10 +15,14 @@ import { getMetadataToPage } from '../utils/meta-tags'
 import StoryblokClient from 'storyblok-js-client'
 
 const getParam = function(val) {
+  if (!window) {
+    return null
+  }
+
   var result = '',
       tmp = []
 
-  location.search
+  window.location.search
     .substr(1)
     .split('&')
     .forEach(function (item) {
