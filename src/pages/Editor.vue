@@ -15,7 +15,7 @@ import { getMetadataToPage } from '../utils/meta-tags'
 import StoryblokClient from 'storyblok-js-client'
 
 const getParam = function(val) {
-  if (!window) {
+  if (typeof window === 'undefined') {
     return null
   }
 
