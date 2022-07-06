@@ -2,7 +2,7 @@
   <h1 align="center">Gridsome Website by Storyblok</h1>
 </p>
 
-![Site preview image](./src/image-preview.png)
+![Site preview image](https://raw.githubusercontent.com/storyblok/storyblok-gridsome-boilerplate-moon/master/src/image-preview.png)
 
 Check the website [here](https://demo.storyblok.com/).
 
