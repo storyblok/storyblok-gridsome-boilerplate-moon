@@ -1,3 +1,6 @@
+> [!WARNING]
+> This repository is no longer maintained.
+
 <p align="center">
   <h1 align="center">Gridsome Website by Storyblok</h1>
 </p>
